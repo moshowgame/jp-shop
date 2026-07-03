@@ -810,6 +810,7 @@ a:hover { color: var(--color-vermilion); }
 .qr-modal .btn-close-modal {
   position: absolute;
   top: 12px; right: 12px;
+  z-index: 10;              /* 确保在 .modal-body (position:relative) 之上，可点击 */
   width: 32px; height: 32px;
   border-radius: 50%;
   background: var(--color-paper-2);
