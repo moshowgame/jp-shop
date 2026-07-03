@@ -67,12 +67,12 @@
 
   $('#detailDesc').html(product.description);
 
-  // CTA 綁定
+  // CTA 綁定 → 跳轉聯繫頁
   $('#btnBuy').on('click', function () {
-    window.JP_SHOP.openQR('buy', product);
+    location.href = 'contact.html';
   });
   $('#btnContact').on('click', function () {
-    window.JP_SHOP.openQR('contact', product);
+    location.href = 'contact.html';
   });
 
   // 相關推薦

@@ -919,3 +919,190 @@ a:hover { color: var(--color-vermilion); }
 
 /* ============== 細節頁導航佔位 ============== */
 .detail-page .app-header { background: transparent; border-bottom: none; }
+
+/* ============== 聯繫頁 ============== */
+/* 顶部 banner：小巧留白，避免占满首屏 */
+.contact-banner {
+  position: relative;
+  height: 110px;
+  background:
+    linear-gradient(135deg, rgba(216,207,196,.55) 0%, rgba(243,238,229,.85) 100%),
+    url("https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wabi-sabi%20Japanese%20paper%20texture%2C%20beige%20linen%2C%20soft%20natural%20light%2C%20minimalist%2C%20top%20view&image_size=landscape_4_3") center/cover no-repeat;
+}
+
+/* 标题区 */
+.contact-eyebrow {
+  font-family: var(--font-serif-jp);
+  font-size: 12px;
+  color: var(--color-vermilion);
+  letter-spacing: 4px;
+  margin: 0 0 8px;
+  text-align: center;
+}
+.contact-title {
+  font-family: var(--font-serif-cn);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin: 0 0 4px;
+  text-align: center;
+  color: var(--color-ink);
+}
+.contact-sub {
+  font-family: var(--font-serif-jp);
+  font-size: 13px;
+  color: var(--color-muted);
+  letter-spacing: 3px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+.contact-lead {
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: var(--color-ink);
+  text-align: center;
+  margin: 0 auto 24px;
+  max-width: 320px;
+}
+
+/* 卡片：竖向布局，icon+标题在上，QR 在下居中 */
+.contact-card {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.contact-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+.contact-card .contact-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  margin-bottom: 18px;
+}
+.contact-card .contact-icon {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.contact-card .contact-icon.alipay  { background: #1677FF; }
+.contact-card .contact-icon.line   { background: #06C755; }
+.contact-card .contact-icon.wechat { background: #07C160; }
+.contact-card .contact-info { flex: 1; min-width: 0; }
+.contact-card .contact-info h4 {
+  font-family: var(--font-serif-cn);
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 2px;
+  letter-spacing: 1.5px;
+  color: var(--color-ink);
+}
+.contact-card .contact-info p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-muted);
+  line-height: 1.5;
+  letter-spacing: .5px;
+}
+
+/* 二维码静态图：自适应宽度，居中显示 */
+.contact-card .contact-qr {
+  display: inline-block;
+  max-width: 200px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(60, 50, 40, .05);
+}
+.contact-card .contact-qr img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 使用提示 */
+.contact-tip {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-muted);
+  letter-spacing: .5px;
+  line-height: 1.7;
+  margin: 6px 0 4px;
+  padding: 0 10px;
+}
+.contact-tip i {
+  color: var(--color-vermilion);
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0 18px;
+  color: var(--color-muted);
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+.contact-divider::before,
+.contact-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-line);
+}
+
+.contact-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.contact-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  padding: 9px 18px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  color: var(--color-ink);
+  letter-spacing: 1.5px;
+  background: #fff;
+  transition: all .25s ease;
+}
+.contact-actions a:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-color: var(--color-ink);
+}
+
+.contact-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-muted);
+  letter-spacing: 1px;
+  margin-top: 4px;
+  padding-bottom: 40px;
+}

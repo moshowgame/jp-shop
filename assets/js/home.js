@@ -60,9 +60,9 @@
     $('html, body').animate({ scrollTop: $('#collection').offset().top - 10 }, 500);
   });
 
-  // 底部導航：客服 QR
+  // 底部導航：客服 → 跳轉聯繫頁
   $('#navContact').on('click', function (e) {
     e.preventDefault();
-    window.JP_SHOP.openQR('contact', null);
+    location.href = 'contact.html';
   });
 })(jQuery);
