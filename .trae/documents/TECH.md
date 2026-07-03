@@ -8,15 +8,15 @@ flowchart LR
         HTML[HTML 頁面]
         CSS[Bootstrap 5 + 自定義 CSS]
         JS[jQuery 3 + 自定義腳本]
-        QR[qrcode.js 二維碼生成]
+        IMG[靜態 QR 圖片]
     end
     HTML --> CSS
     HTML --> JS
-    JS --> QR
-    QR -->|data:image| Modal[彈窗展示]
+    HTML -->|contact.html| IMG
+    JS -->|location.href| Contact[contact.html]
 ```
 
-採用純前端 SPA-like 多頁架構：使用 jQuery 控制頁面跳轉與數據渲染，無後端，無構建工具。
+採用純前端多頁架構：使用 jQuery 控制頁面跳轉與數據渲染，無後端，無構建工具。客服與下單引導改為獨立頁面 `contact.html`，二維碼以靜態圖片提供，無需 js 動態生成。
 
 ## 2. 技術棧
 
@@ -24,9 +24,9 @@ flowchart LR
 - **CSS3**：自定義樣式 + CSS 變量
 - **Bootstrap 5.3.x**（CDN）：柵格、工具類、Modal 組件
 - **Bootstrap Icons**（CDN）：UI 圖標
-- **jQuery 3.7.x**（CDN）：DOM 操作、事件、AJAX
-- **qrcode.js 1.0.0**（CDN）：客戶端生成 QR Code
+- **jQuery 3.7.x**（CDN）：DOM 操作、事件
 - **字體（CDN / Google Fonts）**：Noto Serif SC / Noto Sans SC / Noto Serif JP / Klee One
+- **二維碼**：靜態圖片（`assets/images/alipay-qr.jpg`、`wechat-qr.jpg`）
 - **後端**：無
 - **數據庫**：無，使用 JS 對象作為 mock 數據
 
@@ -36,10 +36,9 @@ flowchart LR
 |------|------|------|
 | `/` 或 `/index.html` | index.html | 首頁：Hero + 分類 + 商品網格 |
 | `/product.html?id=p01` | product.html | 商品詳情頁，根據 `id` 查詢 mock 數據 |
-| `/about.html` | about.html | 品牌故事頁（可選） |
-| 錨點 `#qr-modal` | — | 觸發 QR Code 彈窗 |
+| `/contact.html` | contact.html | 聯繫頁：支付寶 / 微信 QR + 其他聯繫方式 |
 
-頁面間跳轉使用原生 `?id=xxx` 查詢參數，jQuery 讀取 `location.search` 渲染對應商品。
+頁面間跳轉使用原生 `?id=xxx` 查詢參數，jQuery 讀取 `location.search` 渲染對應商品；客服入口、詳情頁 CTA 統一跳轉至 `contact.html`。
 
 ## 4. 目錄結構
 
@@ -47,15 +46,17 @@ flowchart LR
 jp-shop/
 ├── index.html                  # 首頁
 ├── product.html                # 詳情頁模板
+├── contact.html                # 聯繫頁（支付寶/微信 QR + 其他方式）
 ├── assets/
 │   ├── css/
 │   │   └── style.css           # 自定義主題
 │   ├── js/
 │   │   ├── data.js             # 商品 mock 數據
 │   │   ├── home.js             # 首頁邏輯
-│   │   ├── product.js          # 詳情頁邏輯
-│   │   └── qr-modal.js         # QR 彈窗通用邏輯
+│   │   └── product.js          # 詳情頁邏輯
 │   └── images/
+│       ├── alipay-qr.jpg       # 支付寶二維碼
+│       ├── wechat-qr.jpg       # 微信二維碼
 │       └── (生成式商品圖)
 └── .trae/
     └── documents/
@@ -101,12 +102,12 @@ jp-shop/
 
 ## 6. 關鍵交互實現
 
-### 6.1 QR Code 彈窗
+### 6.1 客服 / 下單引導（聯繫頁）
 
-- 點擊「立即購買」→ `openQR('buy', product)` → 動態填充 Modal，調用 `new QRCode(el, { text: 'https://line.me/...' })`
-- 點擊「聯繫店鋪」→ `openQR('contact', product)` → 顯示 WeChat / 郵箱 QR
-- 使用 Bootstrap 5 原生 `bootstrap.Modal` 組件
-- 文案支持中 / 日 / 英切換（默認中文）
+- 點擊「立即購買」「聯繫店鋪」或底部客服導航 → `location.href = 'contact.html'`
+- `contact.html` 展示支付寶 / 微信支付二維碼（靜態 jpg，無需 js 生成）
+- 提供 Email / Instagram / Facebook 等其他聯繫方式
+- 使用 CSS `flex` 與 `max-width` 確保 QR 圖片自適應移動端
 
 ### 6.2 商品詳情渲染
 
@@ -118,11 +119,17 @@ jp-shop/
 - 點擊 chip → 更新 `active` 樣式 → 重新過濾商品數組 → 重新渲染網格
 - 動畫：fade-out 150ms → 替換 DOM → fade-in 200ms
 
+### 6.4 「本期甄選」欄目適配
+
+- `.chip-bar` 使用 `flex-wrap: wrap` 替代 `overflow-x: auto`
+- 欄目按容器寬度自動換行，保證全部可見，避免 mobile 端被截斷
+- `@media (max-width: 380px)` 微調內邊距與字號，優化極窄屏體驗
+
 ## 7. 性能與可訪問性
 
 - 所有外部資源使用 CDN，支持緩存
 - 圖片使用生成式 API，size 控制在合理範圍
-- ARIA：按鈕 `aria-label`，Modal 焦點管理
+- ARIA：按鈕 `aria-label`，返回按鈕焦點管理
 - 觸摸目標 ≥ 44×44px
 - 動效使用 `prefers-reduced-motion` 降級
 
@@ -143,3 +150,12 @@ npx serve .
 ```
 
 訪問 `http://localhost:8080/`。
+
+## 10. 維護要點
+
+| 場景 | 操作 |
+|------|------|
+| 更換支付二維碼 | 替換 `assets/images/alipay-qr.jpg` 或 `wechat-qr.jpg` |
+| 新增聯繫方式 | 編輯 `contact.html` 的 `.contact-actions` 區塊 |
+| 調整聯繫頁樣式 | 編輯 `assets/css/style.css` 的「聯繫頁」section |
+| 修改欄目 | 編輯 `index.html` 的 `.chip-bar`，`.contact-card` 等 |

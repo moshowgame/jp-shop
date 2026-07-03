@@ -11,7 +11,7 @@
 
 ## ✨ 項目簡介
 
-「匠物」(TAKUMI) 是一個展示性質的日系生活好物網站，預置 10 款商品、4 大分類，每款商品擁有獨立詳情頁。點擊「立即購買 / 聯繫店鋪」會彈出 QR Code 彈窗，引導用戶至 LINE / WeChat 完成下單或諮詢，**無在線支付功能**。
+「匠物」(TAKUMI) 是一個展示性質的日系生活好物網站，預置 10 款商品、4 大分類，每款商品擁有獨立詳情頁。客服與下單引導採用 **獨立聯繫頁**（`contact.html`），展示支付寶 / 微信支付二維碼，並提供 Email、Instagram、Facebook 等其他方式，**無在線支付功能**。
 
 ## 👤 作者介紹
 
@@ -51,7 +51,7 @@
 | UI 框架 | Bootstrap 5.3.x | CDN |
 | 圖標 | Bootstrap Icons 1.11 | CDN |
 | JS 庫 | jQuery 3.7.1 | CDN |
-| 二維碼 | qrcode.js 1.0.0 | CDN |
+| 二維碼 | 靜態圖片（支付寶 / 微信） | `assets/images/*.jpg` |
 | 字體 | Noto Serif/Sans SC、Noto Serif JP、Klee One | Google Fonts |
 | 後端 | 無 | — |
 | 數據 | JS 對象（mock） | `assets/js/data.js` |
@@ -62,15 +62,17 @@
 jp-shop/
 ├── index.html              # 首頁：Hero + 分類 + 商品網格
 ├── product.html            # 詳情頁模板（?id=xxx）
+├── contact.html            # 聯繫頁：支付寶/微信 QR + 其他方式
 ├── assets/
 │   ├── css/
 │   │   └── style.css       # 主題樣式（侘寂配色、字體、動效）
 │   ├── js/
 │   │   ├── data.js         # 10 款商品 + 4 個分類 mock 數據
 │   │   ├── home.js         # 首頁渲染與分類切換
-│   │   ├── product.js      # 詳情頁渲染與交互
-│   │   └── qr-modal.js     # QR Code 彈窗通用邏輯
-│   └── images/             # （可選）本地圖片素材
+│   │   └── product.js      # 詳情頁渲染與交互
+│   └── images/
+│       ├── alipay-qr.jpg   # 支付寶二維碼（contact 頁使用）
+│       └── wechat-qr.jpg   # 微信支付二維碼（contact 頁使用）
 └── .trae/
     └── documents/
         ├── PRD.md          # 產品需求文檔
@@ -101,6 +103,9 @@ npx serve .
 | `/` 或 `/index.html` | 首頁：Hero、分類切換、商品瀑布流 |
 | `/product.html?id=p01` | 商品詳情頁（id 為 `p01` ~ `p10`） |
 | `/product.html?id=invalid` | 空狀態頁，提供返回首頁鏈接 |
+| `/contact.html` | 聯繫頁：支付寶 / 微信二維碼 + Email / IG / FB |
+
+頁面間跳轉：客服入口、詳情頁「立即購買 / 聯繫店鋪」、底部導航統一跳轉到 `contact.html`。
 
 ## 🛍️ 商品清單
 
@@ -141,16 +146,13 @@ npx serve .
 | 分類切換 | 點擊 chip → `getByCategory(key)` → 重新渲染網格（fade 動畫） |
 | 詳情頁路由 | `URLSearchParams` 讀取 `?id=` → `getById()` 填充 DOM |
 | 圖片畫廊 | 點擊縮略圖切換主圖（淡入淡出） |
-| 購買 QR | `JP_SHOP.openQR('buy', product)` → 動態生成 `https://...order?sku=...` |
-| 聯繫 QR | `JP_SHOP.openQR('contact', product)` → 動態生成 `https://...contact?channel=wechat` |
+| 購買 / 聯繫 | 跳轉至 `contact.html`，展示支付寶 / 微信 QR |
+| 底部客服導航 | 跳轉至 `contact.html` |
 
 ## 🔧 自定義配置
 
-### 替換二維碼內容
-編輯 [assets/js/qr-modal.js](assets/js/qr-modal.js) 中 `openQR()` 函數內的 `qrText`：
-```js
-const qrText = 'https://your-line-official.url/...';
-```
+### 替換二維碼
+直接替換 `assets/images/` 下的 `alipay-qr.jpg` 和 `wechat-qr.jpg` 即可。建議尺寸 600×800（豎向），格式 jpg / png，保持寬高比 3:4 視覺效果最佳。
 
 ### 新增 / 修改商品
 編輯 [assets/js/data.js](assets/js/data.js) 中的 `products` 數組，遵循結構：
