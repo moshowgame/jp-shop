@@ -274,39 +274,9 @@ a:hover { color: var(--color-vermilion); }
 
 .chip-bar {
   display: flex;
-  flex-wrap: wrap;          /* 移动端允许换行，避免栏目被截断 */
+  flex-wrap: wrap;          /* 依可用宽度自动换行，保证栏目完整可见 */
   gap: 8px;
   padding: 4px 20px 12px;
-}
-
-/* 桌面端（视口 ≥ 600px）保持单行横向滚动，更像 App 分类条 */
-@media (min-width: 600px) {
-  .chip-bar {
-    flex-wrap: nowrap;
-    gap: 10px;
-    padding: 0 20px 8px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
-    /* 右侧渐隐遮罩，提示有更多栏目可滑动 */
-    -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent 100%);
-            mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent 100%);
-  }
-  .chip-bar::-webkit-scrollbar { display: none; }
-  .chip { scroll-snap-align: start; }
-}
-
-/* 小屏微调：缩小 chip 内边距与字号，让栏目更紧凑 */
-@media (max-width: 380px) {
-  .chip {
-    padding: 7px 13px;
-    font-size: 12.5px;
-  }
-  .chip .jp {
-    font-size: 10.5px;
-    margin-left: 4px;
-  }
 }
 
 .chip {
@@ -321,6 +291,18 @@ a:hover { color: var(--color-vermilion); }
   cursor: pointer;
   transition: all .25s ease;
   white-space: nowrap;
+}
+
+/* 小屏微调：缩小 chip 内边距与字号，尽量让栏目在一行内排满 */
+@media (max-width: 380px) {
+  .chip {
+    padding: 7px 12px;
+    font-size: 12.5px;
+  }
+  .chip .jp {
+    font-size: 10.5px;
+    margin-left: 4px;
+  }
 }
 .chip:hover { border-color: var(--color-ink); }
 .chip.active {
