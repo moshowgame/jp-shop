@@ -173,7 +173,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 
 .hero-art {
   position: relative;
-  max-width: 680px;
+  max-width: 460px;
   margin: 0 auto;
 }
 
@@ -186,8 +186,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 
 .hero-art img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: auto;
 }
 
 /* 朱印章 */
@@ -296,6 +295,19 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
   color: var(--ink-soft);
   margin-top: 12px;
   letter-spacing: 0.08em;
+}
+
+/* 系列横幅（物料 banner 图） */
+.series-banner {
+  max-width: 720px;
+  margin: 26px auto 30px;
+}
+
+.series-banner img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 24px rgba(38, 34, 26, 0.08);
 }
 
 /* 系列组合大图 */
