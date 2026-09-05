@@ -2,85 +2,133 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <meta name="theme-color" content="#faf7f2">
-  <meta name="description" content="金晟 SUPERDREAM 超级梦想 - 中国积木潮玩。A系列极致奢华版 / B系列第一季，樱花物语・星空・咖啡屋，任意组合无限延展。">
-  <title>SUPERDREAM 超级梦想 ・ 金晟积木</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta name="description" content="金晟 SUPERDREAM 超级梦想 — 梦想立方A系列 / 超级梦想B系列，日本风・咖啡风・星空风三大主题，任意组合无限延展。">
+  <title>SUPERDREAM 超级梦想 ・ 金晟</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
-  <!-- 自定義 -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
-  <!-- 頂部導航 -->
-  <header class="app-header">
+
+  <!-- 顶部导航 -->
+  <header class="site-header">
     <div class="brand">
-      <img class="brand-logo-img" src="assets/images/logo.svg" alt="金晟 JINSHENG">
-      <span class="brand-sub">SUPERDREAM</span>
+      <img src="assets/images/logo.svg" alt="金晟 JINSHENG">
+      <div class="brand-text">
+        <span class="jp">金 晟 ・ 超 級 夢 想</span>
+        <span class="en">SUPERDREAM</span>
+      </div>
     </div>
-    <button class="lang-switch" id="langSwitch" aria-label="Switch language">
-      <i class="bi bi-translate"></i> <span id="langSwitchText">JA</span>
+    <button class="lang-btn" id="langSwitch" aria-label="言語切替">
+      <i class="bi bi-translate"></i><span id="langSwitchText">JA</span>
     </button>
   </header>
 
   <main>
     <!-- Hero -->
     <section class="hero">
-      <p class="hero-jp">DARE TO LOVE, DARE TO FIGHT, DARE TO DREAM.</p>
-      <div class="hero-image">
-        <img src="assets/images/products/b-01-sakura-promise.jpg" alt="SUPERDREAM Hero">
-        <div class="hero-stamp">梦</div>
+      <span class="v-deco v-deco--left">デ ィ ア ・ ド リ ー ム</span>
+      <span class="v-deco v-deco--right">超 級 夢 想 ・ 第 一 季</span>
+      <p class="hero-kicker">SUPER DREAM PHASE 1</p>
+      <h1 class="hero-title">超級<span class="accent">夢</span>想</h1>
+      <p class="hero-sub" data-i18n="heroSub">中國積木潮玩 ・ 任意組合 無限延展</p>
+
+      <div class="hero-art">
+        <div class="frame">
+          <img src="assets/images/products/a-combo.jpg" alt="SUPERDREAM 任意组合无限延展">
+        </div>
+        <div class="seal">夢</div>
       </div>
+
+      <p class="hero-slogan">DARE TO LOVE, DARE TO FIGHT, DARE TO DREAM.</p>
     </section>
 
-    <!-- 系列 + 商品 -->
-    <section id="collection">
-      <div class="chip-bar" role="tablist">
-        <button class="chip active" data-cat="A">A 系列 <span class="jp">A シリーズ</span></button>
-        <button class="chip" data-cat="B">B 系列 <span class="jp">B シリーズ</span></button>
-        <button class="chip" data-cat="sakura">樱花物语 <span class="jp">桜物語</span></button>
-        <button class="chip" data-cat="starry">星空 <span class="jp">星空</span></button>
-        <button class="chip" data-cat="coffee">咖啡屋 <span class="jp">コーヒー</span></button>
+    <!-- A 系列 -->
+    <div class="section-divider">
+      <span class="no">壱</span>
+      <span class="label">SERIES</span>
+    </div>
+
+    <section class="series-block" id="seriesA">
+      <div class="series-block__head">
+        <span class="series-block__badge">A SERIES</span>
+        <h2 class="series-block__title">夢想立方 ・ 第一季</h2>
+        <p class="series-block__sub">DREAM CUBE PHASE 1</p>
+        <p class="series-block__desc" data-i18n="seriesADesc">亞克力防塵罩立方體 ・ 自由堆疊</p>
       </div>
 
-      <div class="product-grid" id="productGrid">
-        <!-- JS 動態渲染 -->
+      <div class="series-block__combo">
+        <div class="frame">
+          <img src="assets/images/products/a-combo.jpg" alt="A系列 任意组合无限延展" loading="lazy">
+        </div>
+        <span class="combo-note" data-i18n="comboNote">任 意 組 合 ・ 無 限 延 展</span>
       </div>
+
+      <div class="theme-grid" id="themeGridA"></div>
     </section>
 
-    <!-- PDF 末尾品牌口号（来自图册最后一页）-->
-    <section class="about-block">
-      <p class="ja">— 金 晟 ・ 超 级 梦 想 —</p>
-      <p class="about-slogan">中国积木潮玩 · 任意组合 无限延展</p>
-      <p class="about-jp">DARE TO LOVE, DARE TO FIGHT, DARE TO DREAM.</p>
+    <!-- B 系列 -->
+    <div class="section-divider">
+      <span class="no">弐</span>
+      <span class="label">SERIES</span>
+    </div>
+
+    <section class="series-block" id="seriesB">
+      <div class="series-block__head">
+        <span class="series-block__badge">B SERIES</span>
+        <h2 class="series-block__title">超級夢想 ・ 第一季</h2>
+        <p class="series-block__sub">SUPER DREAM PHASE 1</p>
+        <p class="series-block__desc" data-i18n="seriesBDesc">玻璃陽光房大場景 ・ 一屋即一世界</p>
+      </div>
+
+      <div class="series-block__combo">
+        <div class="frame">
+          <img src="assets/images/products/b-combo.jpg" alt="B系列 任意组合无限延展" loading="lazy">
+        </div>
+        <span class="combo-note" data-i18n="comboNote">任 意 組 合 ・ 無 限 延 展</span>
+      </div>
+
+      <div class="theme-grid" id="themeGridB"></div>
+    </section>
+
+    <!-- 联系区块 -->
+    <section class="cta-block">
+      <span class="v-deco v-deco--left">お 気 軽 に</span>
+      <span class="v-deco v-deco--right">ご 連 絡 下 さ い</span>
+      <p class="kicker">CONTACT</p>
+      <h2 data-i18n="ctaTitle">想要擁有您的夢想小屋嗎？</h2>
+      <p class="lead" data-i18n="ctaLead">掃碼添加 LINE / WeChat 客服，告知想要的系列與風格即可</p>
+      <a class="cta-btn" href="contact.html" id="ctaBtn">
+        <i class="bi bi-chat-dots"></i><span data-i18n="ctaBtn">聯 繫 客 服</span>
+      </a>
+      <div class="cta-qr-row">
+        <div class="cta-qr">
+          <img src="assets/images/line-qr.jpg" alt="LINE QR">
+          <span>LINE</span>
+        </div>
+        <div class="cta-qr">
+          <img src="assets/images/wechat-qr.jpg" alt="WeChat QR">
+          <span>WeChat</span>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- 頁腳 -->
-  <footer class="app-footer">
-    <div class="logo">SUPERDREAM</div>
-    <p class="copy">© 2026 金晟积木</p>
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p class="brand-mark">金 晟 SUPERDREAM</p>
+    <p class="slogan">DARE TO LOVE, DARE TO FIGHT, DARE TO DREAM</p>
+    <p class="copy">© 2026 金晟 ・ ALL RIGHTS RESERVED BY LHE ENTERTAINMENT</p>
   </footer>
 
-  <!-- 底部導航 -->
-  <nav class="bottom-nav" aria-label="底部導航">
-    <button class="nav-item active" aria-label="首頁"><i class="bi bi-house-door"></i><span data-i18n="navHome">首頁</span></button>
-    <button class="nav-item" id="navContact" aria-label="客服"><i class="bi bi-chat-dots"></i><span data-i18n="navCustomer">客服</span></button>
-  </nav>
-
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/home.js"></script>
+  <script src="assets/js/data.js?v=5"></script>
+  <script src="assets/js/i18n.js?v=5"></script>
+  <script src="assets/js/home.js?v=5"></script>
 </body>
 </html>

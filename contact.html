@@ -2,131 +2,126 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <meta name="theme-color" content="#faf7f2">
-  <meta name="description" content="聯繫金晟 SUPERDREAM - 掃碼添加 LINE / WeChat，開啟超級夢想之旅。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta name="description" content="聯繫金晟 SUPERDREAM — 掃碼添加 LINE / WeChat，告知想要的系列與風格即可。">
   <title>聯繫我們 — SUPERDREAM</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
-  <!-- 自定義 -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
-  <main class="detail-page">
-    <!-- 頂部 banner -->
-    <section class="contact-banner">
-      <button class="detail-back" id="detailBack" aria-label="返回">
-        <i class="bi bi-chevron-left"></i>
-      </button>
-      <button class="lang-fab lang-fab--banner" id="langSwitch" aria-label="Switch language">
-        <i class="bi bi-translate"></i> <span id="langSwitchText">JA</span>
-      </button>
-      <div class="contact-brand">
-        <img src="assets/images/logo.svg" alt="金晟 JINSHENG" class="contact-logo">
-        <div>
-          <h2>金晟 SUPERDREAM</h2>
-          <p class="contact-tagline">DARE TO LOVE, DARE TO FIGHT, DARE TO DREAM</p>
-        </div>
+
+  <!-- 顶部栏 -->
+  <div class="gallery-topbar">
+    <button class="back-btn" id="btnBack">
+      <i class="bi bi-chevron-left"></i><span data-i18n="back">返回</span>
+    </button>
+    <div class="crumb"><span data-i18n="contactTitle">聯 繫 我 們</span></div>
+    <button class="lang-btn" id="langSwitch" aria-label="言語切替">
+      <i class="bi bi-translate"></i><span id="langSwitchText">JA</span>
+    </button>
+  </div>
+
+  <main class="contact-page">
+    <!-- 咨询上下文（从图集页带过来时显示） -->
+    <div class="contact-context" id="contactContext" style="display:none;">
+      <div class="seal">詢</div>
+      <p class="kicker" data-i18n="ctxKicker">您 正 在 諮 詢</p>
+      <p class="series-name" id="ctxSeries"></p>
+      <p class="theme-name" id="ctxTheme"></p>
+      <p class="hint" data-i18n="ctxHint">添加好友後，直接告知客服即可</p>
+    </div>
+
+    <!-- LINE -->
+    <h2 class="contact-section-title" data-i18n="qrSectionTitle">掃 碼 添 加 好 友</h2>
+
+    <div class="qr-card">
+      <div class="app-head">
+        <div class="app-icon line"><i class="bi bi-line"></i></div>
+        <p class="app-name">LINE</p>
       </div>
-    </section>
+      <img class="qr-img" src="assets/images/line-qr.jpg" alt="LINE QR Code">
+      <p class="app-desc" data-i18n="lineDesc">掃碼添加 LINE 好友 ・ 獲取最新產品資訊</p>
+    </div>
 
-    <section class="detail-body">
-      <h1 class="contact-title" data-i18n="contactTitle">聯繫我們</h1>
-      <p class="contact-sub" data-i18n="contactSub">お気軽にご連絡ください</p>
-
-      <!-- LINE -->
-      <div class="contact-card">
-        <div class="contact-head">
-          <div class="contact-icon line">
-            <i class="bi bi-line"></i>
-          </div>
-          <div class="contact-info">
-            <h4 data-i18n="contactLine">LINE 官方賬號</h4>
-            <p data-i18n="contactLineDesc">掃碼添加 LINE 好友，獲取最新產品與活動資訊</p>
-          </div>
-        </div>
-        <div class="contact-qr">
-          <img src="assets/images/line-qr.jpg" alt="LINE 二維碼">
-        </div>
+    <!-- WeChat -->
+    <div class="qr-card">
+      <div class="app-head">
+        <div class="app-icon wechat"><i class="bi bi-wechat"></i></div>
+        <p class="app-name">WeChat <span style="font-size:12px;color:var(--ink-soft);">微信</span></p>
       </div>
+      <img class="qr-img" src="assets/images/wechat-qr.jpg" alt="WeChat QR Code">
+      <p class="app-desc" data-i18n="wechatDesc">日本 大阪市 ・ 張先生</p>
+    </div>
 
-      <!-- 微信 -->
-      <div class="contact-card">
-        <div class="contact-head">
-          <div class="contact-icon wechat">
-            <i class="bi bi-wechat"></i>
-          </div>
-          <div class="contact-info">
-            <h4 data-i18n="contactWechat">微信 WeChat</h4>
-            <p data-i18n="contactWechatDesc">日本 大阪市・張先生，長按識別二維碼加好友</p>
-          </div>
-        </div>
-        <div class="contact-qr">
-          <img src="assets/images/wechat-qr.jpg" alt="微信二維碼">
-        </div>
-      </div>
-
-      <p class="contact-tip">
-        <i class="bi bi-info-circle"></i>
-        <span data-i18n="contactTip">長按或截圖保存二維碼，打開對應 APP 掃描即可</span>
-      </p>
-
-      <div class="contact-slogan">
-        <p class="ja">— 金 晟 ・ 超 级 梦 想 —</p>
-        <p data-i18n="contactSlogan">中国积木潮玩 · 任意组合 无限延展</p>
-        <p class="small" data-i18n="contactSloganSmall">AGES 8+ · DIY · 6+ 主题场景</p>
-      </div>
-    </section>
+    <!-- 使用说明 -->
+    <div class="contact-guide">
+      <p class="title" data-i18n="guideTitle">購 買 方 式</p>
+      <p data-i18n="guideText">長按或截圖保存二維碼，打開對應 APP 掃描添加好友。<br>添加後發送您想要的「系列 + 風格」即可：</p>
+      <p class="example" id="guideExample">「我想要 A 系列的櫻花物語」</p>
+    </div>
   </main>
 
-  <!-- Scripts -->
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p class="brand-mark">金 晟 SUPERDREAM</p>
+    <p class="slogan">DARE TO LOVE, DARE TO FIGHT, DARE TO DREAM</p>
+    <p class="copy">© 2026 金晟 ・ ALL RIGHTS RESERVED BY LHE ENTERTAINMENT</p>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js?v=5"></script>
+  <script src="assets/js/i18n.js?v=5"></script>
   <script>
-    // 返回按鈕
-    document.getElementById('detailBack').addEventListener('click', function () {
-      const isJa = new URL(location.href).searchParams.get('lang') === 'ja';
-      if (document.referrer && document.referrer.indexOf(location.host) !== -1) {
-        history.back();
-      } else {
-        location.href = (isJa ? 'jp.html' : 'index.html');
-      }
-    });
+    (function ($) {
+      const { getCollection, getSeries, t } = window.JP_SHOP_DATA;
+      const { getLang, t: tUi } = window.JP_SHOP_I18N;
+      const lang = getLang();
+      const isJa = lang === 'ja';
 
-    // 语言切换
-    document.getElementById('langSwitch').addEventListener('click', function () {
-      const url = new URL(location.href);
-      const isJa = url.searchParams.get('lang') === 'ja';
-      if (isJa) url.searchParams.delete('lang');
-      else url.searchParams.set('lang', 'ja');
-      location.href = url.toString();
-    });
+      document.documentElement.setAttribute('lang', isJa ? 'ja' : 'zh-Hant');
+      document.title = (isJa ? 'お問い合わせ' : '聯繫我們') + ' — SUPERDREAM';
+      $('#langSwitchText').text(isJa ? '中' : 'JA');
 
-    // i18n 应用
-    (function () {
-      const lang = new URL(location.href).searchParams.get('lang') === 'ja' ? 'ja' : 'zh';
-      const i18n = window.JP_SHOP_I18N;
-      document.documentElement.setAttribute('lang', lang === 'ja' ? 'ja' : 'zh-Hant');
-      document.title = (lang === 'ja' ? 'お問い合わせ' : '聯繫我們') + ' — SUPERDREAM';
-
-      const switchText = document.getElementById('langSwitchText');
-      if (switchText) switchText.textContent = lang === 'ja' ? '中' : 'JA';
-
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        el.innerHTML = i18n.t(key);
+      // i18n
+      $('[data-i18n]').each(function () {
+        $(this).html(tUi($(this).data('i18n')));
       });
-    })();
+
+      // 上下文
+      const params = new URLSearchParams(location.search);
+      const c = getCollection(params.get('c'));
+      if (c) {
+        const s = getSeries(c.series);
+        $('#ctxSeries').text(isJa ? `${s.id}シリーズ ・ ${t(s, 'name', lang)}` : `${s.id}系列 ・ ${t(s, 'name', lang)}`);
+        $('#ctxTheme').text(isJa ? `風格：${t(c, 'name', lang)}` : `風格：${t(c, 'name', lang)}`);
+        $('#contactContext').show();
+        $('#guideExample').text(isJa
+          ? `「${s.id}シリーズの${t(c, 'nameJa', lang)}が欲しいです」`
+          : `「我想要 ${s.id} 系列的${t(c, 'name', lang)}」`);
+      }
+
+      // 返回
+      $('#btnBack').on('click', function () {
+        if (document.referrer && document.referrer.indexOf(location.host) !== -1) {
+          history.back();
+        } else {
+          location.href = isJa ? 'index.html?lang=ja' : 'index.html';
+        }
+      });
+
+      // 语言切换
+      $('#langSwitch').on('click', function () {
+        const url = new URL(location.href);
+        if (isJa) url.searchParams.delete('lang');
+        else url.searchParams.set('lang', 'ja');
+        location.href = url.toString();
+      });
+    })(jQuery);
   </script>
 </body>
 </html>
