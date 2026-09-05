@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f2e9">
-  <meta name="description" content="聯繫金晟 SUPERDREAM — 掃碼添加 LINE / WeChat，告知想要的系列與風格即可。">
-  <title>聯繫我們 — SUPERDREAM</title>
+  <meta name="description" content="金晟 SUPERDREAM お問い合わせ — QRコードで LINE / WeChat 友達追加、欲しいシリーズとスタイルをお知らせください。">
+  <title>お問い合わせ — SUPERDREAM</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,11 @@
   <!-- 顶部栏 -->
   <div class="gallery-topbar">
     <button class="back-btn" id="btnBack">
-      <i class="bi bi-chevron-left"></i><span data-i18n="back">返回</span>
+      <i class="bi bi-chevron-left"></i><span data-i18n="back">戻る</span>
     </button>
-    <div class="crumb"><span data-i18n="contactTitle">聯 繫 我 們</span></div>
+    <div class="crumb"><span data-i18n="contactTitle">お 問 い 合 わ せ</span></div>
     <button class="lang-btn" id="langSwitch" aria-label="言語切替">
-      <i class="bi bi-translate"></i><span id="langSwitchText">JA</span>
+      <i class="bi bi-translate"></i><span id="langSwitchText">中</span>
     </button>
   </div>
 
@@ -30,14 +30,14 @@
     <!-- 咨询上下文（从图集页带过来时显示） -->
     <div class="contact-context" id="contactContext" style="display:none;">
       <div class="seal">詢</div>
-      <p class="kicker" data-i18n="ctxKicker">您 正 在 諮 詢</p>
+      <p class="kicker" data-i18n="ctxKicker">お 問 い 合 わ せ 中</p>
       <p class="series-name" id="ctxSeries"></p>
       <p class="theme-name" id="ctxTheme"></p>
-      <p class="hint" data-i18n="ctxHint">添加好友後，直接告知客服即可</p>
+      <p class="hint" data-i18n="ctxHint">友達追加後、そのままスタッフにお伝えください</p>
     </div>
 
     <!-- LINE -->
-    <h2 class="contact-section-title" data-i18n="qrSectionTitle">掃 碼 添 加 好 友</h2>
+    <h2 class="contact-section-title" data-i18n="qrSectionTitle">QR コ ー ド で 友 達 追 加</h2>
 
     <div class="qr-card">
       <div class="app-head">
@@ -45,7 +45,7 @@
         <p class="app-name">LINE</p>
       </div>
       <img class="qr-img" src="assets/images/line-qr.jpg" alt="LINE QR Code">
-      <p class="app-desc" data-i18n="lineDesc">掃碼添加 LINE 好友 ・ 獲取最新產品資訊</p>
+      <p class="app-desc" data-i18n="lineDesc">QRコードをスキャンしてLINE友達追加 ・ 最新情報をお届け</p>
     </div>
 
     <!-- WeChat -->
@@ -55,14 +55,14 @@
         <p class="app-name">WeChat <span style="font-size:12px;color:var(--ink-soft);">微信</span></p>
       </div>
       <img class="qr-img" src="assets/images/wechat-qr.jpg" alt="WeChat QR Code">
-      <p class="app-desc" data-i18n="wechatDesc">日本 大阪市 ・ 張先生</p>
+      <p class="app-desc" data-i18n="wechatDesc">日本・大阪市 ・ 張様</p>
     </div>
 
     <!-- 使用说明 -->
     <div class="contact-guide">
-      <p class="title" data-i18n="guideTitle">購 買 方 式</p>
-      <p data-i18n="guideText">長按或截圖保存二維碼，打開對應 APP 掃描添加好友。<br>添加後發送您想要的「系列 + 風格」即可：</p>
-      <p class="example" id="guideExample">「我想要 A 系列的櫻花物語」</p>
+      <p class="title" data-i18n="guideTitle">購 入 方 法</p>
+      <p data-i18n="guideText">QRコードを長押しまたはスクリーンショット保存して、各アプリでスキャンしてください。<br>友達追加後、「シリーズ + スタイル」を送るだけ：</p>
+      <p class="example" id="guideExample">「Aシリーズのさくら物語が欲しいです」</p>
     </div>
   </main>
 
@@ -74,8 +74,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-  <script src="assets/js/data.js?v=5"></script>
-  <script src="assets/js/i18n.js?v=5"></script>
+  <script src="assets/js/data.js?v=6"></script>
+  <script src="assets/js/i18n.js?v=6"></script>
   <script>
     (function ($) {
       const { getCollection, getSeries, t } = window.JP_SHOP_DATA;
@@ -98,7 +98,7 @@
       if (c) {
         const s = getSeries(c.series);
         $('#ctxSeries').text(isJa ? `${s.id}シリーズ ・ ${t(s, 'name', lang)}` : `${s.id}系列 ・ ${t(s, 'name', lang)}`);
-        $('#ctxTheme').text(isJa ? `風格：${t(c, 'name', lang)}` : `風格：${t(c, 'name', lang)}`);
+        $('#ctxTheme').text(isJa ? `テーマ：${t(c, 'name', lang)}` : `風格：${t(c, 'name', lang)}`);
         $('#contactContext').show();
         $('#guideExample').text(isJa
           ? `「${s.id}シリーズの${t(c, 'nameJa', lang)}が欲しいです」`
@@ -110,15 +110,15 @@
         if (document.referrer && document.referrer.indexOf(location.host) !== -1) {
           history.back();
         } else {
-          location.href = isJa ? 'index.html?lang=ja' : 'index.html';
+          location.href = isJa ? 'index.html' : 'index.html?lang=zh';
         }
       });
 
       // 语言切换
       $('#langSwitch').on('click', function () {
         const url = new URL(location.href);
-        if (isJa) url.searchParams.delete('lang');
-        else url.searchParams.set('lang', 'ja');
+        if (isJa) url.searchParams.set('lang', 'zh');
+        else url.searchParams.delete('lang');
         location.href = url.toString();
       });
     })(jQuery);

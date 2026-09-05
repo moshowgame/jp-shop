@@ -12,8 +12,8 @@
   const JP_NUM = ['壱', '弐', '参', '四', '五', '六', '七', '八', '九', '拾'];
 
   function qs(suffix) {
-    if (!isJa) return suffix;
-    return suffix + (suffix.indexOf('?') >= 0 ? '&' : '?') + 'lang=ja';
+    if (isJa) return suffix;
+    return suffix + (suffix.indexOf('?') >= 0 ? '&' : '?') + 'lang=zh';
   }
 
   // ========== 读取当前主题 ==========
@@ -58,11 +58,11 @@
     const item = `
       <figure class="art-item">
         <div class="frame">
-          <img src="${img.src}" alt="${img.caption}" loading="lazy">
+          <img src="${img.src}" alt="${t(img, 'caption', lang)}" loading="lazy">
         </div>
         <figcaption class="art-caption">
           <span class="no">${JP_NUM[i] || i + 1}</span>
-          <span class="name">${img.caption}</span>
+          <span class="name">${t(img, 'caption', lang)}</span>
           <span class="en">${img.captionEn}</span>
         </figcaption>
       </figure>
@@ -89,8 +89,8 @@
   $('.gallery-topbar').append($lang);
   $lang.on('click', function () {
     const url = new URL(location.href);
-    if (isJa) url.searchParams.delete('lang');
-    else url.searchParams.set('lang', 'ja');
+    if (isJa) url.searchParams.set('lang', 'zh');
+    else url.searchParams.delete('lang');
     location.href = url.toString();
   });
 })(jQuery);

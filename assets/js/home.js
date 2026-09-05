@@ -9,8 +9,8 @@
   const isJa = lang === 'ja';
 
   function qs(suffix) {
-    if (!isJa) return suffix;
-    return suffix + (suffix.indexOf('?') >= 0 ? '&' : '?') + 'lang=ja';
+    if (isJa) return suffix;
+    return suffix + (suffix.indexOf('?') >= 0 ? '&' : '?') + 'lang=zh';
   }
 
   // ========== 渲染主题卡片 ==========
@@ -48,13 +48,13 @@
   });
 
   $('#langSwitchText').text(isJa ? '中' : 'JA');
-  $('#ctaBtn').attr('href', isJa ? 'contact.html?lang=ja' : 'contact.html');
+  $('#ctaBtn').attr('href', isJa ? 'contact.html' : 'contact.html?lang=zh');
 
   // 语言切换
   $('#langSwitch').on('click', function () {
     const url = new URL(location.href);
-    if (isJa) url.searchParams.delete('lang');
-    else url.searchParams.set('lang', 'ja');
+    if (isJa) url.searchParams.set('lang', 'zh');
+    else url.searchParams.delete('lang');
     location.href = url.toString();
   });
 })(jQuery);

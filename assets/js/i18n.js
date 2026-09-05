@@ -10,6 +10,8 @@ window.JP_SHOP_I18N = (function () {
         ctaBtn: '聯 繫 客 服',
         // 首页
         heroSub: '中國積木潮玩 ・ 任意組合 無限延展',
+        seriesATitle: '夢想立方 ・ 第一季',
+        seriesBTitle: '超級夢想 ・ 第一季',
         seriesADesc: '亞克力防塵罩立方體 ・ 自由堆疊',
         seriesBDesc: '玻璃陽光房大場景 ・ 一屋即一世界',
         comboNote: '任 意 組 合 ・ 無 限 延 展',
@@ -36,6 +38,8 @@ window.JP_SHOP_I18N = (function () {
         ctaBtn: 'お 問 い 合 わ せ',
         // ホーム
         heroSub: '中國ブロック・トレンディ玩具 ・ 自由に組み合わせ 無限に拡張',
+        seriesATitle: 'ドリームキューブ ・ 第1シーズン',
+        seriesBTitle: 'スーパードリーム ・ 第1シーズン',
         seriesADesc: 'アクリルケース付きキューブ ・ 自由に積み重ね',
         seriesBDesc: 'ガラスサンルームの大きなシーン ・ 一つの家が一つの世界',
         comboNote: '自 由 に 組 み 合 わ せ ・ 無 限 に 拡 張',
@@ -69,7 +73,7 @@ window.JP_SHOP_I18N = (function () {
     } catch (e) {}
     const path = location.pathname.toLowerCase();
     if (path.endsWith('/jp.html') || path.indexOf('/jp/') !== -1) return 'ja';
-    return 'zh';
+    return 'ja';
   }
 
   function setLang(lang) {
