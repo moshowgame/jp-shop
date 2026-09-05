@@ -12,7 +12,8 @@
   const JP_NUM = ['壱', '弐', '参', '四', '五', '六', '七', '八', '九', '拾'];
 
   function qs(suffix) {
-    return isJa ? suffix + '?lang=ja' : suffix;
+    if (!isJa) return suffix;
+    return suffix + (suffix.indexOf('?') >= 0 ? '&' : '?') + 'lang=ja';
   }
 
   // ========== 读取当前主题 ==========
