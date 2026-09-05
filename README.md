@@ -1,46 +1,55 @@
-# 匠物 ・ 日系生活好物
+# SUPERDREAM 超级梦想 ・ 金晟积木
 
-> 侘寂美學、手作溫度、日常儀式感。  
-> 一個基於 **jQuery 3 + Bootstrap 5** 的純靜態移動端購物展示網站。
+> 任意組合・無限延展 ・ 中國積木潮玩微縮夢幻屋。  
+> 一個基於 **jQuery 3 + Bootstrap 5** 的純靜態移動端展示網站。
 
 ![status](https://img.shields.io/badge/status-static-success)
 ![tech](https://img.shields.io/badge/jQuery-3.7.x-blue)
 ![tech](https://img.shields.io/badge/Bootstrap-5.3.x-purple)
+![brand](https://img.shields.io/badge/brand-金晟-ec5b2c)
 
 ---
 
 ## ✨ 項目簡介
 
-「匠物」(TAKUMI) 是一個展示性質的日系生活好物網站，預置 10 款商品、4 大分類，每款商品擁有獨立詳情頁。客服與下單引導採用 **獨立聯繫頁**（`contact.html`），展示支付寶 / 微信支付二維碼，並提供 Email、Instagram、Facebook 等其他方式，**無在線支付功能**。
+**SUPERDREAM 超级梦想** 是金晟积木（中國潮玩）旗下的微縮積木屋系列，包含 **A 系列・極致奢華版** 與 **B 系列・第一季** 兩大產品線，主題涵蓋「櫻花物語」「夜空中最亮的星」「走過咖啡屋」「北國之春」等。所有產品支持「任意組合・無限延展」，顧客可通過 LINE / 微信與客服聯繫下單，**無在線支付功能**。
 
-## 👤 作者介紹
+## 🛍️ 產品系列
 
-**Moshow（鄭鍇）** — 熱愛技術與分享的 **Technical Lead × 數據科學家 × SpringBoot 專家**
+### A 系列 · 極致奢華版
+| ID | 名稱 | 主題 | 價格 |
+|----|------|------|------|
+| a-01 | 樱之歌 SAKURA SONG | 樱花物语 | ¥268 |
+| a-02 | 开运屋 LUCKY HOUSE | 樱花物语 | ¥258 |
+| a-03 | 樱之恋 SAKURA'S LOVE | 樱花物语 | ¥288 |
+| a-04 | 星语 STAR WHISPERS | 夜空中最亮的星 | ¥298 |
+| a-05 | 星愿 STAR WISHES | 夜空中最亮的星 | ¥298 |
+| a-06 | 快乐起啡 HAPPY COFFEE | 走过咖啡屋 | ¥278 |
+| a-07 | 啡黄腾达 HAPPY COFFEE PRO | 走过咖啡屋 | ¥318 |
 
-> 🏆 **CSDN 博客之星 2025 年度 TOP100** ｜ ⭐ **GitHub 4K stars**
+### B 系列 · 第一季
+| ID | 名稱 | 主題 | 價格 |
+|----|------|------|------|
+| b-01 | 樱花树下的约定 | 日本风 | ¥198 |
+| b-02 | 北国之春 | 日本风 | ¥198 |
+| b-03 | 星语心愿 | 星空风 | ¥218 |
+| b-04 | 莫奈咖啡店 | 咖啡风 | ¥228 |
 
-### 🔗 社交主頁
+> 完整圖冊見 [doc/SUPERDREAM-A系列.pdf](doc/SUPERDREAM-（A系列).pdf) 與 [doc/SUPERDREAM-B系列.pdf](doc/SUPERDREAM-（B系列).pdf)。
 
-| 平台 | 鏈接 |
+## 👤 品牌
+
+**金晟（JINSHENG）** — 中國積木潮玩品牌
+
+> 🏆 設計理念：萬像潮趣世界，構建你心中永不關門的童話小鎮。  
+> ✨ 品牌口號：**DARE TO LOVE, DARE TO FIGHT, DARE TO DREAM**
+
+### 🔗 客服與聯繫
+
+| 渠道 | 鏈接 |
 |------|------|
-| GitHub | [moshowgame](https://github.com/moshowgame) |
-| CSDN | [zhengkai.blog.csdn.net](https://zhengkai.blog.csdn.net/) |
-
-### 🏅 權威認證
-
-- ☁️ **GCA** — 谷歌雲架構師認證
-- 🧠 **Neo4j Data Scientist** — Neo4j 數據科學家認證
-- ☁️ **阿里雲 ACP** — 阿里雲認證
-- 🏢 **金蝶高級 CRM / 供應鏈工程師** 認證
-- 📋 **PMP** — 項目管理認證
-- 📋 **CSPM** — 項目管理專業人員能力評價認證
-- 🤖 **廣東省人工智能訓練師** 認證
-
-### 💬 關於我
-
-長期深耕企業級後端架構、數據治理與雲原生領域，活躍於開源社區，歡迎技術交流與合作。
-
----
+| LINE 官方賬號 | 掃碼 [doc/line.jpg](doc/line.jpg) 或 `assets/images/line-qr.jpg` |
+| 微信 WeChat | 掃碼 [doc/wechat.jpg](doc/wechat.jpg) 或 `assets/images/wechat-qr.jpg`（張先生・日本 大阪市） |
 
 ## 🛠️ 技術棧
 
@@ -51,7 +60,7 @@
 | UI 框架 | Bootstrap 5.3.x | CDN |
 | 圖標 | Bootstrap Icons 1.11 | CDN |
 | JS 庫 | jQuery 3.7.1 | CDN |
-| 二維碼 | 靜態圖片（支付寶 / 微信） | `assets/images/*.jpg` |
+| 二維碼 | 靜態圖片（LINE / 微信） | `assets/images/*.jpg` |
 | 字體 | Noto Serif/Sans SC、Noto Serif JP、Klee One | Google Fonts |
 | 後端 | 無 | — |
 | 數據 | JS 對象（mock） | `assets/js/data.js` |
@@ -60,30 +69,41 @@
 
 ```
 jp-shop/
-├── index.html              # 首頁：Hero + 分類 + 商品網格
+├── index.html              # 首頁：Hero + 系列切換 + 商品網格
 ├── product.html            # 詳情頁模板（?id=xxx）
-├── contact.html            # 聯繫頁：支付寶/微信 QR + 其他方式
-├── assets/
-│   ├── css/
-│   │   └── style.css       # 主題樣式（侘寂配色、字體、動效）
-│   ├── js/
-│   │   ├── data.js         # 10 款商品 + 4 個分類 mock 數據
-│   │   ├── home.js         # 首頁渲染與分類切換
-│   │   └── product.js      # 詳情頁渲染與交互
-│   └── images/
-│       ├── alipay-qr.jpg   # 支付寶二維碼（contact 頁使用）
-│       └── wechat-qr.jpg   # 微信支付二維碼（contact 頁使用）
-└── .trae/
-    └── documents/
-        ├── PRD.md          # 產品需求文檔
-        └── TECH.md         # 技術架構文檔
+├── contact.html            # 聯繫頁：LINE/微信 QR + 品牌信息
+├── doc/                    # 物料目錄
+│   ├── SUPERDREAM-（A系列).pdf
+│   ├── SUPERDREAM-（B系列).pdf
+│   ├── logo.jpg            # 金晟 Logo
+│   ├── line.jpg            # LINE 二維碼
+│   └── wechat.jpg          # 微信二維碼
+└── assets/
+    ├── css/
+    │   └── style.css       # 主題樣式（SUPERDREAM 橙色、字體、動效）
+    ├── js/
+    │   ├── data.js         # 11 款商品 + 6 個分類 mock 數據
+    │   ├── home.js         # 首頁渲染與分類切換
+    │   └── product.js      # 詳情頁渲染與交互
+    └── images/
+        ├── logo.jpg        # 金晟 Logo
+        ├── line-qr.jpg     # LINE 二維碼（contact 頁）
+        ├── wechat-qr.jpg   # 微信二維碼（contact 頁）
+        ├── catalog-a.jpg   # A 系列完整圖冊
+        ├── catalog-b.jpg   # B 系列完整圖冊
+        ├── alipay-qr.jpg   # 歷史預留
+        └── products/       # 各產品場景裁切圖
+            ├── a-01-sakura-song.jpg
+            ├── a-02-lucky-house.jpg
+            ├── ...
+            └── b-04-monet-coffee.jpg
 ```
 
 ## 🚀 快速開始
 
 ### 方式一：Python（推薦）
 ```bash
-cd /home/moshow/workspace/html/jp-shop
+cd /path/to/jp-shop
 python3 -m http.server 8080
 ```
 訪問 [http://localhost:8080/](http://localhost:8080/)
@@ -100,38 +120,26 @@ npx serve .
 
 | 路由 | 說明 |
 |------|------|
-| `/` 或 `/index.html` | 首頁：Hero、分類切換、商品瀑布流 |
-| `/product.html?id=p01` | 商品詳情頁（id 為 `p01` ~ `p10`） |
+| `/` 或 `/index.html` | 首頁：Hero、系列切換、商品瀑布流 |
+| `/product.html?id=a-01` | 商品詳情頁（id 為 `a-01` ~ `a-07`、`b-01` ~ `b-04`） |
 | `/product.html?id=invalid` | 空狀態頁，提供返回首頁鏈接 |
-| `/contact.html` | 聯繫頁：支付寶 / 微信二維碼 + Email / IG / FB |
+| `/contact.html` | 聯繫頁：LINE / 微信二維碼 + 品牌信息 |
 
-頁面間跳轉：客服入口、詳情頁「立即購買 / 聯繫店鋪」、底部導航統一跳轉到 `contact.html`。
-
-## 🛍️ 商品清單
-
-| ID | 名稱 | 日文 | 分類 | 價格 |
-|----|------|------|------|------|
-| p01 | 宇治抹茶套裝 | 宇治抹茶セット | 茶器・餐具 | ¥168 |
-| p02 | 櫻花和菓子禮盒 | 桜の和菓子詰合せ | 食・甜點 | ¥128 |
-| p03 | 招財貓擺件 | 招き猫 | 居家・擺件 | ¥98 |
-| p04 | 漆金筷組 | 漆塗り金箸 | 茶器・餐具 | ¥88 |
-| p05 | 富士山玻璃杯 | 富士グラス | 茶器・餐具 | ¥78 |
-| p06 | 江戶風鈴 | 風鈴 | 居家・擺件 | ¥68 |
-| p07 | 和紋手帕 | 和柄ハンカチ | 文房・手作 | ¥38 |
-| p08 | 旅人手帳 | 旅の手帳 | 文房・手作 | ¥158 |
-| p09 | 折紙禮盒 | 折り紙セット | 文房・手作 | ¥58 |
-| p10 | 抹茶毛巾布 | 抹茶タオル | 居家・擺件 | ¥48 |
+頁面間跳轉：客服入口、詳情頁「立即購買 / 聯繫客服」均跳轉到 `contact.html`。
 
 ## 🎨 設計系統
 
 ### 配色
 | 變量 | 顏色 | 用途 |
 |------|------|------|
-| `--color-ink` | `#1a1a1a` | 主文字・主按鈕 |
-| `--color-paper` | `#faf7f2` | 背景（和紙白） |
-| `--color-vermilion` | `#b94a48` | 強調・CTA（朱紅） |
-| `--color-matcha` | `#7a8a7a` | 次要強調（抹茶綠） |
-| `--color-sand` | `#d6cfc4` | 邊框・分隔線（砂金） |
+| `--color-ink` | `#1f1a17` | 主文字・主按鈕 |
+| `--color-paper` | `#fdf8f1` | 背景（米白） |
+| `--color-primary` | `#ec5b2c` | 主強調・CTA（SUPERDREAM 橙） |
+| `--color-primary-dark` | `#c84518` | 按鈕 hover |
+| `--color-primary-soft` | `#fce0d0` | 標籤・背景漸層 |
+| `--color-series-a` | `#ec5b2c` | A系列徽章（橙） |
+| `--color-series-b` | `#5aa9c9` | B系列徽章（藍） |
+| `--color-line` | `#ece4d3` | 邊框・分隔線 |
 
 ### 字體
 - 中文標題：**Noto Serif SC**（襯線）
@@ -143,43 +151,41 @@ npx serve .
 
 | 功能 | 實現 |
 |------|------|
-| 分類切換 | 點擊 chip → `getByCategory(key)` → 重新渲染網格（fade 動畫） |
+| 系列 / 主題切換 | 點擊 chip → `getByCategory(key)` → 重新渲染網格（fade 動畫） |
 | 詳情頁路由 | `URLSearchParams` 讀取 `?id=` → `getById()` 填充 DOM |
 | 圖片畫廊 | 點擊縮略圖切換主圖（淡入淡出） |
-| 購買 / 聯繫 | 跳轉至 `contact.html`，展示支付寶 / 微信 QR |
+| 購買 / 聯繫 | 跳轉至 `contact.html`，展示 LINE / 微信 QR |
 | 底部客服導航 | 跳轉至 `contact.html` |
 
 ## 🔧 自定義配置
 
 ### 替換二維碼
-直接替換 `assets/images/` 下的 `alipay-qr.jpg` 和 `wechat-qr.jpg` 即可。建議尺寸 600×800（豎向），格式 jpg / png，保持寬高比 3:4 視覺效果最佳。
+直接替換 `assets/images/` 下的 `line-qr.jpg` 和 `wechat-qr.jpg` 即可。建議尺寸 600×600（正方形），格式 jpg / png。
 
 ### 新增 / 修改商品
 編輯 [assets/js/data.js](assets/js/data.js) 中的 `products` 數組，遵循結構：
 ```js
 {
-  id: 'p11',
-  name: '商品名稱',
-  nameJa: '日本語名',
-  category: 'tea',         // tea | craft | home | food
-  categoryName: '茶器・餐具',
-  price: 100,
-  cover: imageUrl('...', 'portrait_4_3'),
-  images: [imageUrl('...', 'square'), ...],
-  material: '材質',
-  size: '尺寸',
-  origin: '產地',
-  description: '<p>...</p>',
-  tags: ['標籤1', '標籤2']
+  id: 'a-08',                          // 唯一 id
+  name: '新商品',
+  nameJa: 'NEW PRODUCT',
+  series: 'A',                          // A | B
+  seriesName: 'A系列 · 极致奢华版',
+  category: 'sakura',                   // sakura | starry | coffee | ...
+  categoryName: '樱花物语',
+  price: 268,
+  cover: 'assets/images/products/a-08-combo.jpg',
+  images: ['assets/images/products/a-08-combo.jpg'],
+  material: '木质 / 亚克力',
+  size: '约 17 × 15 × 19 cm',
+  origin: '中国 · 金晟原创',
+  description: '<p>商品介绍...</p>',
+  tags: ['樱花', '新系列']
 }
 ```
 
-### 替換圖片
-圖片默認使用 `text_to_image` API 動態生成（無需本地存儲）。如需使用本地圖片：
-```js
-// data.js
-cover: 'assets/images/p11-cover.jpg'
-```
+### 替換產品圖
+將新圖片放入 `assets/images/products/` 並在 `data.js` 中引用。建議裁切為豎向比例（3:4 或 4:5），解析度 ≥ 1182 × 1500。
 
 ## 📱 瀏覽器兼容
 
@@ -190,9 +196,10 @@ cover: 'assets/images/p11-cover.jpg'
 
 ## 📄 相關文檔
 
-- [PRD.md](.trae/documents/PRD.md) — 產品需求文檔
-- [TECH.md](.trae/documents/TECH.md) — 技術架構文檔
+- [doc/SUPERDREAM-（A系列).pdf](doc/SUPERDREAM-（A系列).pdf) — A 系列產品圖冊
+- [doc/SUPERDREAM-（B系列).pdf](doc/SUPERDREAM-（B系列).pdf) — B 系列產品圖冊
+- [doc/logo.jpg](doc/logo.jpg) — 金晟品牌 Logo
 
 ## 📝 許可
 
-僅供學習與展示使用。商品圖片由 AI 生成，版權歸圖像生成方所有。
+僅供展示使用。產品圖片版權歸金晟所有。

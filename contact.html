@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#faf7f2">
-  <meta name="description" content="聯繫匠物 — 掃碼添加 LINE / WeChat，開啟日系好物之旅。">
-  <title>聯繫我們 — 匠物</title>
+  <meta name="description" content="聯繫金晟 SUPERDREAM - 掃碼添加 LINE / WeChat，開啟超級夢想之旅。">
+  <title>聯繫我們 — SUPERDREAM</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,45 +21,52 @@
 </head>
 <body>
   <main class="detail-page">
-    <!-- 頂部 banner（縮小，留出内容空间） -->
+    <!-- 頂部 banner -->
     <section class="contact-banner">
       <button class="detail-back" id="detailBack" aria-label="返回">
         <i class="bi bi-chevron-left"></i>
       </button>
+      <button class="lang-fab lang-fab--banner" id="langSwitch" aria-label="Switch language">
+        <i class="bi bi-translate"></i> <span id="langSwitchText">JA</span>
+      </button>
+      <div class="contact-brand">
+        <img src="assets/images/logo.svg" alt="金晟 JINSHENG" class="contact-logo">
+        <div>
+          <h2>金晟 SUPERDREAM</h2>
+          <p class="contact-tagline">DARE TO LOVE, DARE TO FIGHT, DARE TO DREAM</p>
+        </div>
+      </div>
     </section>
 
     <section class="detail-body">
-      <p class="contact-eyebrow">— お 問 合 せ —</p>
-      <h1 class="contact-title">聯繫匠物</h1>
-      <p class="contact-sub">お気軽にご連絡ください</p>
+      <h1 class="contact-title" data-i18n="contactTitle">聯繫我們</h1>
+      <p class="contact-sub" data-i18n="contactSub">お気軽にご連絡ください</p>
 
-      <p class="contact-lead">走訪京都、東京、金澤的百年工坊，<br>只為為你挑選那些能為日常帶來儀式感的小物。</p>
-
-      <!-- 支付寶 -->
+      <!-- LINE -->
       <div class="contact-card">
         <div class="contact-head">
-          <div class="contact-icon alipay">
-            <i class="bi bi-credit-card-2-front"></i>
+          <div class="contact-icon line">
+            <i class="bi bi-line"></i>
           </div>
           <div class="contact-info">
-            <h4>支付寶掃碼</h4>
-            <p>打開支付寶 APP 掃碼下單或諮詢</p>
+            <h4 data-i18n="contactLine">LINE 官方賬號</h4>
+            <p data-i18n="contactLineDesc">掃碼添加 LINE 好友，獲取最新產品與活動資訊</p>
           </div>
         </div>
         <div class="contact-qr">
-          <img src="assets/images/alipay-qr.jpg" alt="支付寶二維碼">
+          <img src="assets/images/line-qr.jpg" alt="LINE 二維碼">
         </div>
       </div>
 
-      <!-- 微信支付 -->
+      <!-- 微信 -->
       <div class="contact-card">
         <div class="contact-head">
           <div class="contact-icon wechat">
             <i class="bi bi-wechat"></i>
           </div>
           <div class="contact-info">
-            <h4>微信支付</h4>
-            <p>打開微信掃碼完成支付 / 添加好友</p>
+            <h4 data-i18n="contactWechat">微信 WeChat</h4>
+            <p data-i18n="contactWechatDesc">日本 大阪市・張先生，長按識別二維碼加好友</p>
           </div>
         </div>
         <div class="contact-qr">
@@ -69,32 +76,57 @@
 
       <p class="contact-tip">
         <i class="bi bi-info-circle"></i>
-        長按或截圖保存二維碼，打開對應 APP 掃描即可
+        <span data-i18n="contactTip">長按或截圖保存二維碼，打開對應 APP 掃描即可</span>
       </p>
 
-      <div class="contact-divider">其 他 方 式</div>
-      <div class="contact-actions">
-        <a href="mailto:hello@jp-shop.example.com"><i class="bi bi-envelope"></i> Email</a>
-        <a href="#" onclick="return false;"><i class="bi bi-instagram"></i> Instagram</a>
-        <a href="#" onclick="return false;"><i class="bi bi-facebook"></i> Facebook</a>
+      <div class="contact-slogan">
+        <p class="ja">— 金 晟 ・ 超 级 梦 想 —</p>
+        <p data-i18n="contactSlogan">中国积木潮玩 · 任意组合 无限延展</p>
+        <p class="small" data-i18n="contactSloganSmall">AGES 8+ · DIY · 6+ 主题场景</p>
       </div>
-
-      <p class="contact-note">※ 工作日 10:00 – 19:00 回覆</p>
     </section>
   </main>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script>
     // 返回按鈕
     document.getElementById('detailBack').addEventListener('click', function () {
+      const isJa = new URL(location.href).searchParams.get('lang') === 'ja';
       if (document.referrer && document.referrer.indexOf(location.host) !== -1) {
         history.back();
       } else {
-        location.href = 'index.html';
+        location.href = (isJa ? 'jp.html' : 'index.html');
       }
     });
+
+    // 语言切换
+    document.getElementById('langSwitch').addEventListener('click', function () {
+      const url = new URL(location.href);
+      const isJa = url.searchParams.get('lang') === 'ja';
+      if (isJa) url.searchParams.delete('lang');
+      else url.searchParams.set('lang', 'ja');
+      location.href = url.toString();
+    });
+
+    // i18n 应用
+    (function () {
+      const lang = new URL(location.href).searchParams.get('lang') === 'ja' ? 'ja' : 'zh';
+      const i18n = window.JP_SHOP_I18N;
+      document.documentElement.setAttribute('lang', lang === 'ja' ? 'ja' : 'zh-Hant');
+      document.title = (lang === 'ja' ? 'お問い合わせ' : '聯繫我們') + ' — SUPERDREAM';
+
+      const switchText = document.getElementById('langSwitchText');
+      if (switchText) switchText.textContent = lang === 'ja' ? '中' : 'JA';
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.innerHTML = i18n.t(key);
+      });
+    })();
   </script>
 </body>
 </html>

@@ -1,207 +1,284 @@
 /**
- * 匠物 — 商品 mock 數據
- * 10 款日系生活好物
+ * SUPERDREAM 超级梦想 - 商品 mock 数据
+ * A系列 极致奢华版（樱花物语・星空・咖啡）+ B系列 第一季（日本风・星空风・咖啡风）
+ * 中国积木潮玩 · DIY 微缩梦幻屋
+ * 支持中/日双语文案
  */
 window.JP_SHOP_DATA = (function () {
   const products = [
     {
-      id: 'p01',
-      name: '宇治抹茶套裝',
-      nameJa: '宇治抹茶セット',
-      category: 'tea',
-      categoryName: '茶器・餐具',
-      price: 168,
-      cover: imageUrl('Japanese matcha tea set, ceramic tea bowl, bamboo whisk chasen, on linen cloth, soft natural window light, wabi-sabi, beige background, top view, minimalist', 'portrait_4_3'),
+      id: 'a-01',
+      name: '樱之歌',
+      nameJa: '桜の歌',
+      series: 'A',
+      seriesName: 'Aシリーズ・極致豪華版',
+      category: 'sakura',
+      categoryName: '桜物語',
+      price: 268,
+      cover: 'assets/images/products/a-01-sakura-song.jpg',
       images: [
-        imageUrl('Japanese matcha tea set, ceramic tea bowl, bamboo whisk chasen, soft natural light, beige background, top view, minimalist', 'square'),
-        imageUrl('Matcha green tea powder in wooden spoon, ceramic bowl, traditional Japanese, soft light, top view', 'square'),
-        imageUrl('Bamboo chasen whisk, ceramic chawan tea bowl, Japanese matcha ceremony tools, soft beige background, minimalist', 'square')
+        'assets/images/products/a-01-sakura-song.jpg'
       ],
-      material: '陶器 / 竹',
-      size: '茶碗 8cm / 茶筅 10cm',
-      origin: '日本・宇治',
-      description: '<p>來自宇治百年老鋪的手作茶器組合，包含一只薄燒茶碗與天然竹製茶筅。釉色溫潤，邊緣的淺綠色澤宛如初春茶園。</p><p>以八十目石磨低速研磨的抹茶粉，沖泡時散發出青草與海苔的清雅香氣。茶碗可作為日常抹茶杯使用，亦可盛裝小食。</p>',
-      tags: ['手作', '限量', '茶道']
+      material: '木质 / 亚克力 / 树脂配件',
+      materialJa: '木材 / アクリル / 樹脂パーツ',
+      size: '约 17 × 15 × 19 cm',
+      sizeJa: '約 17 × 15 × 19 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「樱之歌」以日式町屋为原型，黑瓦屋顶搭配纸灯笼与樱花枝，营造怀旧而温情的春日街景。</p><p>内置招财猫、达摩、福袋等吉祥小物件，附带「升级包」款亚克力防尘罩，藏趣与实用兼具。</p>',
+      descJa: '<p>「桜の歌」は日本昔ながらの町家をモチーフに、黒瓦の屋根に紙提灯と桜の枝を組み合わせ、ノスタルジックで温かな春の街並みを再現しました。</p><p>招き猫・だるま・福袋などの縁起物に加え、アップグレードパッケージのアクリル防塵カバーが付属します。コレクション性と実用性を両立。</p>',
+      tags: ['樱花', '吉祥', 'A系列'],
+      tagsJa: ['桜', '縁起', 'Aシリーズ']
     },
     {
-      id: 'p02',
-      name: '櫻花和菓子禮盒',
-      nameJa: '桜の和菓子詰合せ',
-      category: 'food',
-      categoryName: '食・甜點',
-      price: 128,
-      cover: imageUrl('Japanese sakura mochi wagashi sweets, pink white traditional, elegant plating, soft natural light, top view', 'portrait_4_3'),
+      id: 'a-02',
+      name: '开运屋',
+      nameJa: '開運屋',
+      series: 'A',
+      seriesName: 'Aシリーズ・極致豪華版',
+      category: 'sakura',
+      categoryName: '桜物語',
+      price: 258,
+      cover: 'assets/images/products/a-02-lucky-house.jpg',
       images: [
-        imageUrl('Japanese sakura mochi wagashi, pink and white traditional sweets, elegant wooden tray, soft light', 'square'),
-        imageUrl('Close up of cherry blossom wagashi, delicate pink petal pattern, traditional Japanese confection, top view', 'square'),
-        imageUrl('Assorted Japanese wagashi sweets, pastel colors, wooden box, minimalist, top view', 'square')
+        'assets/images/products/a-02-lucky-house.jpg'
       ],
-      material: '糯米 / 紅豆 / 櫻葉',
-      size: '8 入 / 禮盒',
-      origin: '日本・京都',
-      description: '<p>春季限定的櫻花和菓子禮盒，由京都老字號和菓子屋手工製作，包含櫻餅、草餅、求肥等八枚精緻小品。</p><p>每一片都包裹著一片鹽漬櫻葉，清雅花香與紅豆餡的甘甜在舌尖綻放，是賞花時節最應景的伴手禮。</p>',
-      tags: ['限定', '季節', '送禮']
+      material: '木质 / 亚克力 / 树脂配件',
+      materialJa: '木材 / アクリル / 樹脂パーツ',
+      size: '约 17 × 15 × 19 cm',
+      sizeJa: '約 17 × 15 × 19 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「开运屋」取日式招福之意，黑瓦屋檐下布置可悬挂的「开运」牌与小风车，传递好运与祝福。</p><p>樱花枝自窗口探出，桌面上整齐摆放着招财摆件与点心盒，是一份「好运开箱」式的微缩礼物。</p>',
+      descJa: '<p>「開運屋」は日本の招福文化に着想を得ています。黒瓦の軒下に「開運」札とかざぐるまを吊るし、幸運と祝福を伝えます。</p><p>桜の枝が窓から差し込み、卓上には縁起物と和菓子の箱が整然と並びます。開けた瞬間から幸運が届く、ミニチュア・ギフトです。</p>',
+      tags: ['开运', '招福', 'A系列'],
+      tagsJa: ['開運', '招福', 'Aシリーズ']
     },
     {
-      id: 'p03',
-      name: '招財貓擺件',
-      nameJa: '招き猫',
-      category: 'home',
-      categoryName: '居家・擺件',
-      price: 98,
-      cover: imageUrl('Japanese maneki neko lucky cat figurine, white ceramic, traditional, soft light, minimalist beige background', 'portrait_4_3'),
+      id: 'a-03',
+      name: '樱之恋',
+      nameJa: '桜の恋',
+      series: 'A',
+      seriesName: 'Aシリーズ・極致豪華版',
+      category: 'sakura',
+      categoryName: '桜物語',
+      price: 288,
+      cover: 'assets/images/products/a-03-sakura-love.jpg',
       images: [
-        imageUrl('White maneki neko lucky cat, ceramic, raised paw, traditional Japanese, soft window light', 'square'),
-        imageUrl('Close up of maneki neko face, hand painted ceramic, red collar with golden bell, beige background', 'square'),
-        imageUrl('Maneki neko on wooden shelf, traditional Japanese home interior, wabi-sabi atmosphere', 'square')
+        'assets/images/products/a-03-sakura-love.jpg'
       ],
-      material: '陶瓷 / 手繪',
-      size: '高 15cm',
-      origin: '日本・東京',
-      description: '<p>舉起右爪招財、舉起左爪招客的經典招財貓。純白釉色搭配朱紅項圈與金鈴，溫潤雅緻。</p><p>陶瓷由職人逐隻手繪，每隻表情略有差異，是店鋪與居家招福的經典擺件。</p>',
-      tags: ['招福', '手繪']
+      material: '木质 / 亚克力 / 树脂配件',
+      materialJa: '木材 / アクリル / 樹脂パーツ',
+      size: '约 17 × 15 × 19 cm',
+      sizeJa: '約 17 × 15 × 19 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「樱之恋」以浪漫樱花粉为主调，复刻一间和风小闺房，垂坠的樱花枝与红色和风床品相互映衬。</p><p>窗边摆放和菓子礼盒，桌面上点缀着木屐与团扇，是 A 系列中「樱之歌・樱之恋・快乐起啡」三联作的压轴之作。</p>',
+      descJa: '<p>「桜の恋」はロマンチックな桜色を基調に、和風の小さなプライベートルームを再現。垂れ下がる桜の枝と赤い和風ベッドが互いを引き立てます。</p><p>窓辺には和菓子の詰め合わせ、卓上には下駄と団扇が彩りを添えます。Aシリーズ「桜の歌・桜の恋・快乐起啡」三連作の掉尾を飾る一品です。</p>',
+      tags: ['樱花', '浪漫', 'A系列'],
+      tagsJa: ['桜', 'ロマンチック', 'Aシリーズ']
     },
     {
-      id: 'p04',
-      name: '漆金筷組',
-      nameJa: '漆塗り金箸',
-      category: 'tea',
-      categoryName: '茶器・餐具',
-      price: 88,
-      cover: imageUrl('Japanese lacquer chopsticks with gold accent, minimalist, dark background, soft light, top view', 'portrait_4_3'),
+      id: 'a-04',
+      name: '星语',
+      nameJa: '星のささやき',
+      series: 'A',
+      seriesName: 'Aシリーズ・極致豪華版',
+      category: 'starry',
+      categoryName: '夜空の最も明るい星',
+      price: 298,
+      cover: 'assets/images/products/a-04-stars-promise.jpg',
       images: [
-        imageUrl('Black lacquer chopsticks with gold tip, traditional Japanese, minimalist, soft side light', 'square'),
-        imageUrl('Pair of chopsticks on chopstick rest, Japanese tableware, dark wood background, soft light', 'square'),
-        imageUrl('Hand holding Japanese chopsticks, black lacquer, gold accent, soft beige background', 'square')
+        'assets/images/products/a-04-stars-promise.jpg'
       ],
-      material: '天然木 / 漆塗 / 金箔',
-      size: '長 23cm / 對裝',
-      origin: '日本・新潟',
-      description: '<p>採用越後天然檜木，經七道漆工序打磨而成。筷尖點綴一筆金箔，使用時手部輪廓更顯優雅。</p><p>附原木筷架，無論自用或饋贈皆宜。日常使用後以柔軟布巾擦拭，可長保光澤。</p>',
-      tags: ['工藝', '金箔']
+      material: '木质 / 亚克力 / LED 灯组',
+      materialJa: '木材 / アクリル / LED ライト',
+      size: '约 17 × 15 × 19 cm',
+      sizeJa: '約 17 × 15 × 19 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「星语」以深蓝夜空为主色，墙面、屋顶均印有星轨与星座图案，夜晚亮灯后如临真实星空。</p><p>内置小型天文望远镜与地球仪，墙角摆满星辰挂画与「星愿」漂流瓶，是献给天文爱好者的浪漫礼物。</p>',
+      descJa: '<p>「星のささやき」は深いブルーの夜空を基調に、壁面と屋根に星の軌跡と星座のモチーフが描かれています。夜、灯りを灯せば本物の星空に包まれるよう。</p><p>天体望遠鏡と地球儀を内蔵し、隅には星空の絵画と「星の願い」ボトルが並びます。天文ファンへのロマンあふれる贈り物です。</p>',
+      tags: ['星空', '灯效', 'A系列'],
+      tagsJa: ['星空', 'LED', 'Aシリーズ']
     },
     {
-      id: 'p05',
-      name: '富士山玻璃杯',
-      nameJa: '富士グラス',
-      category: 'tea',
-      categoryName: '茶器・餐具',
-      price: 78,
-      cover: imageUrl('Mt Fuji shaped glass cup, blue gradient sky, transparent glass, soft natural light, white background', 'portrait_4_3'),
+      id: 'a-05',
+      name: '星愿',
+      nameJa: '星の願い',
+      series: 'A',
+      seriesName: 'Aシリーズ・極致豪華版',
+      category: 'starry',
+      categoryName: '夜空の最も明るい星',
+      price: 298,
+      cover: 'assets/images/products/a-05-stars-wish.jpg',
       images: [
-        imageUrl('Mt Fuji shaped glass cup with blue ice inside, soft side light, white background, minimalist', 'square'),
-        imageUrl('Hand holding Mt Fuji glass, blue sky reflection, traditional Japanese aesthetic', 'square'),
-        imageUrl('Pair of Mt Fuji glasses, blue gradient, soft light, beige linen background', 'square')
+        'assets/images/products/a-05-stars-wish.jpg'
       ],
-      material: '手工玻璃',
-      size: '高 9cm / 容量 280ml',
-      origin: '日本・江戶切子',
-      description: '<p>杯身輪廓取自初夏清晨的富士山脈，杯底封入一片漸層藍天，注入透明飲品時彷彿倒映整片青空。</p><p>採用江戶切子技法手工吹製，杯口薄透，杯壁厚實。無論冷飲清酒或冰水，皆能感受山色的清涼。</p>',
-      tags: ['手作', '清透']
+      material: '木质 / 亚克力 / LED 灯组',
+      materialJa: '木材 / アクリル / LED ライト',
+      size: '约 17 × 15 × 19 cm',
+      sizeJa: '約 17 × 15 × 19 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「星愿」是「夜空中最亮的星」系列的睡眠主题款，床铺、毛绒抱枕与床头灯共同构筑一片温馨的星夜。</p><p>配合「星语」可形成一静一动双场景：一边是探索星空的天文角，一边是仰望银河的温柔梦乡。</p>',
+      descJa: '<p>「星の願い」は「夜空の最も明るい星」シリーズのスリープテーマ。ベッド・ぬいぐるみ・ベッドサイドランプが、温かな星の夜を演出します。</p><p>「星のささやき」と組み合わせれば、静と動の二つのシーンに。星空を探求する天文コーナーと、天の川を見上げる優しい夢の世界。</p>',
+      tags: ['星空', '助眠', 'A系列'],
+      tagsJa: ['星空', '快眠', 'Aシリーズ']
     },
     {
-      id: 'p06',
-      name: '江戶風鈴',
-      nameJa: '風鈴',
-      category: 'home',
-      categoryName: '居家・擺件',
-      price: 68,
-      cover: imageUrl('Japanese glass wind chime furin, summer, traditional blue white pattern, soft natural light, minimalist', 'portrait_4_3'),
+      id: 'a-06',
+      name: '快乐起啡',
+      nameJa: 'ハッピーコーヒー',
+      series: 'A',
+      seriesName: 'Aシリーズ・極致豪華版',
+      category: 'coffee',
+      categoryName: 'コーヒーショップ',
+      price: 278,
+      cover: 'assets/images/products/a-06-happy-coffee.jpg',
       images: [
-        imageUrl('Japanese glass wind chime furin, blue and white traditional pattern, hanging, soft window light', 'square'),
-        imageUrl('Close up of Edo furin glass wind chime, delicate hand painted pattern, beige background', 'square'),
-        imageUrl('Wind chime hanging at traditional Japanese engawa porch, summer light, atmospheric', 'square')
+        'assets/images/products/a-06-happy-coffee.jpg'
       ],
-      material: '玻璃 / 和紙 / 木',
-      size: '直徑 7cm / 全長 22cm',
-      origin: '日本・江戶',
-      description: '<p>江戶切子工藝的玻璃風鈴，垂掛一枚和紙短冊。風起時清越的音色為夏日帶來片刻清涼。</p><p>玻璃表面以傳統染付技法描繪流水紋路，光線穿透時在牆面投下淡藍波光，視覺與聽覺同步療癒。</p>',
-      tags: ['夏日', '音樂']
+      material: '木质 / 亚克力 / 树脂配件',
+      materialJa: '木材 / アクリル / 樹脂パーツ',
+      size: '约 17 × 15 × 19 cm',
+      sizeJa: '約 17 × 15 × 19 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「快乐起啡」是一间浓缩的街头咖啡档，「COFFEE TIME」招牌与复古咖啡机一应俱全。</p><p>桌面摆着拉花咖啡与甜点杯，外带杯上的小猫插画俏皮可爱，是送给咖啡迷的微缩下午茶。</p>',
+      descJa: '<p>「ハッピーコーヒー」はコンパクトな街角コーヒースタンド。「COFFEE TIME」の看板とレトロなコーヒーメーカーが完備されています。</p><p>テーブルにはラテアートとデザートカップ、テイクアウトカップの猫イラストがチャーミング。コーヒー好きへのミニチュア・アフタヌーンティー。</p>',
+      tags: ['咖啡', '街头', 'A系列'],
+      tagsJa: ['コーヒー', '街角', 'Aシリーズ']
     },
     {
-      id: 'p07',
-      name: '和紋手帕',
-      nameJa: '和柄ハンカチ',
-      category: 'craft',
-      categoryName: '文房・手作',
-      price: 38,
-      cover: imageUrl('Japanese traditional indigo blue pattern handkerchief, asanoha pattern, soft fabric, top view, beige background', 'portrait_4_3'),
+      id: 'a-07',
+      name: '啡黄腾达',
+      nameJa: 'ハッピーコーヒー PRO',
+      series: 'A',
+      seriesName: 'Aシリーズ・極致豪華版',
+      category: 'coffee',
+      categoryName: 'コーヒーショップ',
+      price: 318,
+      cover: 'assets/images/products/a-07-coffee-upgrade.jpg',
       images: [
-        imageUrl('Folded Japanese handkerchief, indigo blue asanoha pattern, top view, soft light, linen background', 'square'),
-        imageUrl('Hand holding indigo pattern handkerchief, Japanese traditional asanoha design, soft side light', 'square'),
-        imageUrl('Stack of colorful Japanese pattern handkerchiefs, traditional motifs, top view', 'square')
+        'assets/images/products/a-07-coffee-upgrade.jpg'
       ],
-      material: '綿 100% / 注染',
-      size: '50 × 50 cm',
-      origin: '日本・奈良',
-      description: '<p>採用奈良傳統注染工藝，將麻葉紋、矢絣紋、青海波紋等經典和柄反覆浸染而成。</p><p>正反兩面色澤飽滿一致，愈洗愈顯柔潤。可作為手帕、包巾或裝飾使用，隨身攜帶一抹江戶氣息。</p>',
-      tags: ['注染', '和柄']
+      material: '木质 / 亚克力 / 树脂配件',
+      materialJa: '木材 / アクリル / 樹脂パーツ',
+      size: '约 17 × 15 × 19 cm',
+      sizeJa: '約 17 × 15 × 19 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「啡黄腾达」是「快乐起啡」的升级版本，附带「CAFE DE FLORE」招牌与亚克力防尘罩。</p><p>法式复古吧台、藤编座椅与手冲壶套装，呈现一家带有巴黎左岸风情的精品咖啡馆。</p>',
+      descJa: '<p>「ハッピーコーヒー PRO」は「ハッピーコーヒー」のアップグレード版。「CAFE DE FLORE」の看板とアクリル防塵カバーが付属します。</p><p>フレンチレトロなカウンター、籐のチェア、ハンドドリップセット。パリ左岸の風情漂うスペシャルティコーヒーショップを表現しました。</p>',
+      tags: ['咖啡', '升级包', 'A系列'],
+      tagsJa: ['コーヒー', 'アップグレード', 'Aシリーズ']
     },
     {
-      id: 'p08',
-      name: '旅人手帳',
-      nameJa: '旅の手帳',
-      category: 'craft',
-      categoryName: '文房・手作',
-      price: 158,
-      cover: imageUrl('Japanese travel notebook, kraft cover, minimalist, fountain pen on side, top view, soft natural light', 'portrait_4_3'),
+      id: 'b-01',
+      name: '樱花树下的约定',
+      nameJa: '桜の樹の約束',
+      series: 'B',
+      seriesName: 'Bシリーズ・第1シーズン',
+      category: 'sakura',
+      categoryName: '和風',
+      price: 198,
+      cover: 'assets/images/products/b-01-sakura-promise.jpg',
       images: [
-        imageUrl('Opened Japanese travel notebook, blank pages, fountain pen, soft natural light, wooden desk', 'square'),
-        imageUrl('Hand writing in Japanese travel journal, kraft cover, soft side light, atmospheric', 'square'),
-        imageUrl('Stack of Japanese notebooks with kraft covers, ribbon bookmark, minimalist, top view', 'square')
+        'assets/images/products/b-01-sakura-promise.jpg'
       ],
-      material: '牛皮紙 / 棉布 / 絲帶',
-      size: 'A6 / 192 頁',
-      origin: '日本・京都',
-      description: '<p>仿照昭和年代旅人筆記本的素樸造型，封面採用水洗牛皮紙，內頁使用 72gsm 奶油色和紙，書寫流暢不暈墨。</p><p>附緞帶書籤與書脊鬆緊帶，可攤平 180°書寫。無論是旅行紀錄、隨筆速寫或日常規劃，皆能從容容納。</p>',
-      tags: ['手帳', '和紙']
+      material: '木质 / 亚克力 / 树脂配件',
+      materialJa: '木材 / アクリル / 樹脂パーツ',
+      size: '约 16 × 14 × 18 cm',
+      sizeJa: '約 16 × 14 × 18 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「樱花树下的约定」是 B 系列开篇之作，斜屋顶配玻璃天窗，屋内一棵盛放的樱花树从地板「长」到天花板。</p><p>树下摆着小方桌与日式点心盒，仿佛能听见春风与花瓣落下的声音，致敬每一个春日里的小小约定。</p>',
+      descJa: '<p>「桜の樹の約束」はBシリーズの幕開け。傾斜屋根とガラス天窓を備え、屋内には満開の桜が床から天井まで「生える」ように広がります。</p><p>樹の下には小さなテーブルと和菓子の箱。春風と花びらの舞う音が聞こえるようです。春の小さな約束に捧げる一品。</p>',
+      tags: ['樱花', '日本风', 'B系列'],
+      tagsJa: ['桜', '和風', 'Bシリーズ']
     },
     {
-      id: 'p09',
-      name: '折紙禮盒',
-      nameJa: '折り紙セット',
-      category: 'craft',
-      categoryName: '文房・手作',
-      price: 58,
-      cover: imageUrl('Japanese origami paper set, colorful traditional patterns, stacked, soft natural light, top view', 'portrait_4_3'),
+      id: 'b-02',
+      name: '北国之春',
+      nameJa: '北国の春',
+      series: 'B',
+      seriesName: 'Bシリーズ・第1シーズン',
+      category: 'sakura',
+      categoryName: '和風',
+      price: 198,
+      cover: 'assets/images/products/b-02-northern-spring.jpg',
       images: [
-        imageUrl('Origami paper sheets fan out, traditional Japanese patterns, soft light, top view', 'square'),
-        imageUrl('Hand folding origami crane, traditional patterned paper, soft side light, atmospheric', 'square'),
-        imageUrl('Origami cherry blossom from above on wooden table, soft light, traditional patterns', 'square')
+        'assets/images/products/b-02-northern-spring.jpg'
       ],
-      material: '和紙 / 植物染',
-      size: '15 × 15 cm / 100 張',
-      origin: '日本・千葉',
-      description: '<p>嚴選 100 張植物染和紙，涵蓋櫻、梅、流水、市松、麻葉等 12 種傳統和柄，每張色澤皆略有差異。</p><p>紙質柔韌，多次摺疊仍能保持俐落線條，作品完成後可作為書籤、飾品或包裝使用。</p>',
-      tags: ['手作', '教育']
+      material: '木质 / 亚克力 / 树脂配件',
+      materialJa: '木材 / アクリル / 樹脂パーツ',
+      size: '约 16 × 14 × 18 cm',
+      sizeJa: '約 16 × 14 × 18 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「北国之春」复刻北海道春日町屋，粉白樱花与深灰屋檐相映，呈现雪国初融的温柔色调。</p><p>窗户半掩，室内铺有榻榻米与被炉家具，门外「北国の春」牌匾点题，是日剧感十足的小屋场景。</p>',
+      descJa: '<p>「北国の春」は北海道の春風情漂う町家を再現。淡い桜色と濃いグレーの軒先が映え、雪国解けの優しい色調を演出します。</p><p>半開きの窓、屋内の畳とこたつ家具。戸口に掲げられた「北国の春」の看板がテーマを示し、ドラマのロケ地のような小屋の情景です。</p>',
+      tags: ['樱花', '北海道', 'B系列'],
+      tagsJa: ['桜', '北海道', 'Bシリーズ']
     },
     {
-      id: 'p10',
-      name: '抹茶毛巾布',
-      nameJa: '抹茶タオル',
-      category: 'home',
-      categoryName: '居家・擺件',
-      price: 48,
-      cover: imageUrl('Soft green matcha color towel folded, soft fabric, minimalist, soft light, top view, beige background', 'portrait_4_3'),
+      id: 'b-03',
+      name: '星语心愿',
+      nameJa: '星の願い',
+      series: 'B',
+      seriesName: 'Bシリーズ・第1シーズン',
+      category: 'starry',
+      categoryName: '星空風',
+      price: 218,
+      cover: 'assets/images/products/b-03-stars-wish.jpg',
       images: [
-        imageUrl('Folded green matcha towel, soft fabric texture, side light, beige background, minimalist', 'square'),
-        imageUrl('Hand holding soft green towel, soft side light, Japanese aesthetic, atmospheric', 'square'),
-        imageUrl('Stack of pastel green towels, soft light, wabi-sabi composition, top view', 'square')
+        'assets/images/products/b-03-stars-wish.jpg'
       ],
-      material: '有機棉 100%',
-      size: '34 × 80 cm',
-      origin: '日本・今治',
-      description: '<p>今治認證的有機棉毛巾布，以植物性染料染出溫潤的抹茶綠色。觸感蓬鬆柔軟，吸水性優異。</p><p>不含螢光劑，敏感肌亦可使用。隨著使用時間增長，色澤將漸趨沉靜，越用越有味道。</p>',
-      tags: ['有機', '今治']
+      material: '木质 / 亚克力 / LED 灯组',
+      materialJa: '木材 / アクリル / LED ライト',
+      size: '约 16 × 14 × 18 cm',
+      sizeJa: '約 16 × 14 × 18 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「星语心愿」是 B 系列的星空主题款，紫色拱门、黄色大床与天文望远镜构成浪漫的「仰望星河」小宇宙。</p><p>顶部星空印画配合 LED 灯串，夜间点亮后屋内如流星划过，是送给天文与童话爱好者的「枕边星河」。</p>',
+      descJa: '<p>「星の願い」はBシリーズの星空テーマ。紫のアーチ、黄色いベッド、天体望遠鏡が「天の川を見上げる」小さな宇宙を構成します。</p><p>天井の星空プリントとLEDライトが、夜になると流星のように煌めきます。天文や童話のファンへの「枕元の銀河」。</p>',
+      tags: ['星空', '灯效', 'B系列'],
+      tagsJa: ['星空', 'LED', 'Bシリーズ']
+    },
+    {
+      id: 'b-04',
+      name: '莫奈咖啡店',
+      nameJa: 'モネのカフェ',
+      series: 'B',
+      seriesName: 'Bシリーズ・第1シーズン',
+      category: 'coffee',
+      categoryName: 'コーヒー風',
+      price: 228,
+      cover: 'assets/images/products/b-04-monet-coffee.jpg',
+      images: [
+        'assets/images/products/b-04-monet-coffee.jpg'
+      ],
+      material: '木质 / 亚克力 / 树脂配件',
+      materialJa: '木材 / アクリル / 樹脂パーツ',
+      size: '约 16 × 14 × 18 cm',
+      sizeJa: '約 16 × 14 × 18 cm',
+      origin: '中国 · 金晟原创',
+      originJa: '中国・金晟オリジナル',
+      description: '<p>「莫奈咖啡店」以印象派色调复刻一间温暖咖啡屋，复古咖啡机、藤编座椅与墙上的莫奈画作相得益彰。</p><p>窗边小圆桌上摆着拉花咖啡与甜品盘，门口立着「营业中」小黑板，呈现咖啡香气与温柔时光。</p>',
+      descJa: '<p>「モネのカフェ」は印象派の色調で温かいコーヒーショップを再現。レトロなコーヒーメーカー、籐のチェア、壁のモネの絵画が見事に調和します。</p><p>窓辺の丸テーブルにはラテアートとデザートプレート、入り口には「営業中」の黒板。コーヒーの香りと優しいひとときを演出します。</p>',
+      tags: ['咖啡', '莫奈', 'B系列'],
+      tagsJa: ['コーヒー', 'モネ', 'Bシリーズ']
     }
   ];
 
   const categories = [
-    { key: 'all',   name: '全部',   ja: 'すべて' },
-    { key: 'tea',   name: '茶器・餐具', ja: '茶器' },
-    { key: 'craft', name: '文房・手作', ja: '文具' },
-    { key: 'home',  name: '居家・擺件', ja: '暮らし' },
-    { key: 'food',  name: '食・甜點',   ja: '甘味' }
+    { key: 'all',     name: '全部',     nameJa: 'すべて',     ja: 'All' },
+    { key: 'A',       name: 'A系列',     nameJa: 'Aシリーズ',  ja: 'Luxury' },
+    { key: 'B',       name: 'B系列',     nameJa: 'Bシリーズ',  ja: 'Phase 1' },
+    { key: 'sakura',  name: '樱花物语', nameJa: '桜物語',     ja: '桜' },
+    { key: 'starry',  name: '星空系列', nameJa: '星空シリーズ', ja: '星空' },
+    { key: 'coffee',  name: '咖啡系列', nameJa: 'コーヒーシリーズ', ja: '珈琲' }
   ];
 
   function getById(id) {
@@ -209,21 +286,35 @@ window.JP_SHOP_DATA = (function () {
   }
   function getByCategory(key) {
     if (key === 'all') return products;
+    if (key === 'A' || key === 'B') return products.filter(p => p.series === key);
     return products.filter(p => p.category === key);
   }
   function getRecommend(id, n = 3) {
     const cur = getById(id);
     if (!cur) return products.slice(0, n);
-    const sameCat = products.filter(p => p.id !== id && p.category === cur.category);
-    const others = products.filter(p => p.id !== id && p.category !== cur.category);
-    return [...sameCat, ...others].slice(0, n);
+    const sameSeries = products.filter(p => p.id !== id && p.series === cur.series);
+    const others = products.filter(p => p.id !== id && p.series !== cur.series);
+    return [...sameSeries, ...others].slice(0, n);
   }
 
-  return { products, categories, getById, getByCategory, getRecommend };
+  /**
+   * 根据当前语言获取本地化字段
+   * @param {object} obj  产品或分类对象
+   * @param {string} field 字段名（不带语言后缀）
+   * @param {string} lang  'zh' | 'ja'
+   */
+  function t(obj, field, lang) {
+    if (lang === 'ja') {
+      return obj[field + 'Ja'] !== undefined ? obj[field + 'Ja'] : obj[field];
+    }
+    return obj[field];
+  }
+
+  return { products, categories, getById, getByCategory, getRecommend, t };
 })();
 
 /**
- * 構造生成式圖片 URL
+ * 构造图片 URL（保留兼容旧调用）
  */
 function imageUrl(prompt, size) {
   const base = 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image';

@@ -1,16 +1,21 @@
 /* ========================================
-   匠物 — 日系生活好物 主題樣式
+   SUPERDREAM 超级梦想 — 主題樣式
+   金晟积木 · 中国积木潮玩
    ======================================== */
 
 :root {
-  --color-ink: #1a1a1a;
-  --color-paper: #faf7f2;
-  --color-paper-2: #f3eee5;
-  --color-vermilion: #b94a48;
-  --color-vermilion-dark: #9a3a38;
-  --color-matcha: #7a8a7a;
-  --color-sand: #d6cfc4;
-  --color-line: #e8e1d4;
+  --color-ink: #1f1a17;
+  --color-paper: #fdf8f1;
+  --color-paper-2: #f6efe3;
+  --color-primary: #ec5b2c;          /* SUPERDREAM 橙 */
+  --color-primary-dark: #c84518;
+  --color-primary-soft: #fce0d0;
+  --color-series-a: #ec5b2c;          /* A系列 极致奢华版 - 橙 */
+  --color-series-b: #5aa9c9;          /* B系列 第一季 - 蓝 */
+  --color-sakura: #e98aa6;
+  --color-starry: #6b6fc4;
+  --color-coffee: #b07a4b;
+  --color-line: #ece4d3;
   --color-muted: #8a8175;
 
   --font-serif-cn: "Noto Serif SC", "Songti SC", serif;
@@ -42,6 +47,17 @@ html, body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* 日本語ロケール時の微調整 */
+html[lang="ja"] body {
+  font-family: "Noto Sans JP", var(--font-sans-cn);
+  letter-spacing: 0.02em;
+}
+html[lang="ja"] .hero-title,
+html[lang="ja"] .detail-name,
+html[lang="ja"] .contact-title {
+  font-family: "Noto Serif JP", var(--font-serif-cn);
 }
 
 body {
@@ -119,6 +135,75 @@ a:hover { color: var(--color-vermilion); }
   transition: background .2s ease;
 }
 .app-header .icon-btn:hover { background: var(--color-paper-2); }
+
+/* 品牌 Logo 图片（金晟图腾） */
+.app-header .brand-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+}
+
+/* 顶栏右侧 actions 区（含语言切换） */
+.app-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.app-header .lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  font-family: var(--font-sans-cn);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .2s ease;
+  letter-spacing: 1px;
+}
+.app-header .lang-switch:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.app-header .lang-switch i { font-size: 14px; }
+
+/* 详情页/联系页悬浮语言切换按钮 */
+.lang-fab {
+  position: fixed;
+  top: 14px;
+  right: 64px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  font-family: var(--font-sans-cn);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-soft);
+  transition: all .2s ease;
+}
+.lang-fab:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.lang-fab i { font-size: 14px; }
+/* 联系页 banner 内的语言切换（避开左侧返回按钮） */
+.lang-fab--banner { right: 16px; top: 14px; }
 
 /* ============== Hero ============== */
 .hero {
@@ -358,8 +443,25 @@ a:hover { color: var(--color-vermilion); }
   top: 8px;
   font-family: var(--font-hand);
   font-size: 10px;
-  color: var(--color-vermilion);
-  background: rgba(250, 247, 242, 0.92);
+  color: #fff;
+  background: var(--color-vermilion);
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.product-card .badge.series-a { background: var(--color-series-a); }
+.product-card .badge.series-b { background: var(--color-series-b); }
+.product-card .cat {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-family: var(--font-sans-cn);
+  font-size: 10px;
+  color: #fff;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
   padding: 2px 8px;
   border-radius: 999px;
   letter-spacing: 1px;
@@ -564,6 +666,18 @@ a:hover { color: var(--color-vermilion); }
   padding: 2px 10px;
   border-radius: 999px;
   letter-spacing: 1px;
+}
+.detail-series {
+  font-family: var(--font-serif-jp);
+  font-size: 12px;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  margin: 0 0 8px;
+  display: inline-block;
+  background: var(--color-primary-soft);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 .detail-name {
   font-family: var(--font-serif-cn);
@@ -920,14 +1034,100 @@ a:hover { color: var(--color-vermilion); }
 /* ============== 細節頁導航佔位 ============== */
 .detail-page .app-header { background: transparent; border-bottom: none; }
 
-/* ============== 聯繫頁 ============== */
-/* 顶部 banner：小巧留白，避免占满首屏 */
+/* 底部品牌口号（来自图册最后一页） */
+.about-slogan {
+  font-family: var(--font-serif-cn);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: 2px;
+  margin: 8px 0 6px;
+}
+html[lang="ja"] .about-slogan {
+  font-family: var(--font-serif-jp);
+  letter-spacing: 1.5px;
+}
+.about-jp {
+  font-family: var(--font-hand);
+  font-size: 11px;
+  color: var(--color-primary);
+  letter-spacing: 1.5px;
+  margin: 0;
+}
 .contact-banner {
   position: relative;
-  height: 110px;
+  height: 130px;
   background:
-    linear-gradient(135deg, rgba(216,207,196,.55) 0%, rgba(243,238,229,.85) 100%),
-    url("https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wabi-sabi%20Japanese%20paper%20texture%2C%20beige%20linen%2C%20soft%20natural%20light%2C%20minimalist%2C%20top%20view&image_size=landscape_4_3") center/cover no-repeat;
+    linear-gradient(135deg, rgba(255,255,255,.4) 0%, rgba(252,224,208,.55) 100%),
+    linear-gradient(180deg, #fff 0%, #fce0d0 100%);
+  border-bottom: 2px solid var(--color-primary);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contact-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 56px;
+  margin-top: 10px;
+}
+.contact-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: #fff;
+  padding: 6px;
+  box-shadow: var(--shadow-soft);
+}
+.contact-brand h2 {
+  font-family: var(--font-serif-cn);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 4px;
+  color: var(--color-ink);
+}
+.contact-tagline {
+  font-family: var(--font-hand);
+  font-size: 10.5px;
+  color: var(--color-primary);
+  letter-spacing: 1.2px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 底部品牌口号 */
+.contact-slogan {
+  margin-top: 32px;
+  padding: 22px 18px 28px;
+  background: linear-gradient(180deg, var(--color-paper-2) 0%, var(--color-primary-soft) 100%);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+.contact-slogan .ja {
+  font-family: var(--font-serif-jp);
+  font-size: 12px;
+  color: var(--color-primary);
+  letter-spacing: 4px;
+  margin: 0 0 8px;
+}
+.contact-slogan p {
+  margin: 0 0 4px;
+  font-family: var(--font-serif-cn);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: 1.5px;
+}
+.contact-slogan .small {
+  font-family: var(--font-hand);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-muted);
+  letter-spacing: 1px;
+  margin-top: 6px;
 }
 
 /* 标题区 */
